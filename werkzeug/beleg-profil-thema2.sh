@@ -4,12 +4,11 @@
 # Starter und hicolor des Benutzers; GTK-Theme Querencia-Klassisch als Link;
 # gvfs im Wegwerf-Bus nicht aktivierbar (wsdd-Falle, 13 §5).
 #   beleg-profil-thema2.sh <profil> ausgang|thema
-# „thema“: wendet symbole-integrieren.sh 0.3 und thema-integrieren.sh UMGELENKT
-# (alle Umlenkungen) auf das Profil an und setzt in den PROFIL-Kopien der
-# Starter von Files, Terminal und Screenshot die Icon=-Zeile, die die
-# Programm-Sessions setzen sollen (Simulation; live ändert Thema-2 keinen
-# Starter). Das Symbolthema stellt szenario-thema2.sh per gsettings im
-# Wegwerf-dconf ein.
+# „thema“: wendet symbole-integrieren.sh (ab 0.4 mit den Icon=-Zeilen von
+# Terminal und Screenshot) und thema-integrieren.sh UMGELENKT (alle
+# Umlenkungen) auf das Profil an und setzt in der PROFIL-Kopie des
+# Files-Starters die Icon=-Zeile, die QF-0o-2 setzen soll (Simulation). Das
+# Symbolthema stellt szenario-thema2.sh per gsettings im Wegwerf-dconf ein.
 set -euo pipefail
 R=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
 P=${1:?profil}; ART=${2:?ausgang|thema}
@@ -34,8 +33,6 @@ if [ "$ART" = thema ]; then
         bash "$R/integration/thema-integrieren.sh" aktivieren
     A=$P/data/applications
     sed -i 's/^Icon=.*/Icon=org.querencia.Files/' "$A/io.github.lgse.Strata.desktop"
-    sed -i 's/^Icon=.*/Icon=org.querencia.Terminal/' "$A/org.example.Querencia.Terminal.desktop"
-    sed -i 's/^Icon=.*/Icon=org.querencia.Screenshot/' "$A/org.querencia.Screenshot.desktop"
     # GTK 4 liest ohne Settings-Portal (isoliert.py: GDK_DEBUG=no-portals)
     # gsettings nicht; live kommt icon-theme über das Portal. Deshalb steht
     # das Thema hier zusätzlich in settings.ini (Schrift wie isoliert.py).
