@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Querencia Texteditor</title>
+  <desc id="description">Notizblock mit Ringbindung und Textzeilen, davor ein Stift in Querencia-Orange (#F07746), flächig (G2-V).</desc>
+  <!-- Blatt -->
+  <rect x="8" y="8" width="40" height="52" rx="4" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="4"/>
+  <!-- Ringbindung -->
+  <rect x="15" y="3" width="5" height="11" rx="2.5" fill="#5a5a5a"/>
+  <rect x="25.5" y="3" width="5" height="11" rx="2.5" fill="#5a5a5a"/>
+  <rect x="36" y="3" width="5" height="11" rx="2.5" fill="#5a5a5a"/>
+  <!-- Textzeilen -->
+  <rect x="14" y="21" width="27" height="4" rx="2" fill="#9a9a9a"/>
+  <rect x="14" y="30" width="22" height="4" rx="2" fill="#9a9a9a"/>
+  <rect x="14" y="39" width="15" height="4" rx="2" fill="#9a9a9a"/>
+  <!-- Stift, schräg, Spitze nach links unten -->
+  <g transform="translate(42 38) rotate(35)">
+    <rect x="-5.5" y="-26" width="11" height="7" rx="2" fill="#c9c6c2" stroke="#5a5a5a" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="-5.5" y="-19" width="11" height="28" fill="#F07746" stroke="#5a5a5a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-5.5 9 H5.5 L0 21 Z" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-2 16.5 H2 L0 21 Z" fill="#5a5a5a"/>
+  </g>
+</svg>

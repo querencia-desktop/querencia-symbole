@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Querencia Bildbetrachter</title>
+  <desc id="description">Bild im hellen Rahmen: graue Berge, Sonne in Querencia-Orange (#F07746), flächig, ohne Verlauf (G2-V, Motiv von QI-01).</desc>
+  <!-- Rahmen -->
+  <rect x="4" y="9" width="56" height="46" rx="4" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="4"/>
+  <!-- Bildfläche -->
+  <rect x="10" y="15" width="44" height="34" fill="#ffffff"/>
+  <!-- Sonne -->
+  <circle cx="42" cy="25" r="6.5" fill="#F07746"/>
+  <!-- Berge -->
+  <path d="M10 49 V41 L22 26 L33 40 L39 34 L54 47 V49 Z" fill="#9a9a9a"/>
+  <path d="M10 49 V45 Q22 37 32 43 Q42 38 54 44 V49 Z" fill="#5a5a5a"/>
+  <rect x="10" y="15" width="44" height="34" fill="none" stroke="#5a5a5a" stroke-width="2"/>
+</svg>

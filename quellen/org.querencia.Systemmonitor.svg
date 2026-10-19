@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Querencia Systemüberwachung</title>
+  <desc id="description">Bildschirm mit Lastkurve: Rahmen und Fuß grau, Kurve in Querencia-Orange (#F07746), flächig (G2-V).</desc>
+  <!-- Bildschirm -->
+  <rect x="4" y="7" width="56" height="41" rx="4" fill="#5a5a5a"/>
+  <rect x="9" y="12" width="46" height="31" rx="1.5" fill="#3c3c3c"/>
+  <!-- Gitterlinie -->
+  <rect x="9" y="27" width="46" height="1.5" fill="#5a5a5a"/>
+  <!-- Lastkurve -->
+  <path d="M12 33 H20 L25 21 L31 38 L37 17 L42 30 H52" fill="none" stroke="#F07746" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Fuß -->
+  <rect x="27" y="48" width="10" height="6" fill="#5a5a5a"/>
+  <rect x="16" y="53" width="32" height="6" rx="3" fill="#5a5a5a"/>
+</svg>
