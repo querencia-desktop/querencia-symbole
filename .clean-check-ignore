@@ -5,9 +5,8 @@
 #
 # H001 *.log unter nachweis/: Probe-, Bau- und Beleglauf-Protokolle sind die
 #      Nachweise der Integrationen (G2-V, Thema-2) und gehören zum Repo.
-# H005 README.md, LICENSE: Das Repo hat noch keine Doku nach dem
-#      Doku-Standard (Rollout beim nächsten /handoff) und keine Lizenz
-#      (Veröffentlichung entscheidet der Besitzer, GH-1 LIZENZEN.md).
+# H005 LICENSE: Die Lizenz legt der Besitzer fest (GH-1 LIZENZEN.md);
+#      README.md und Arbeitsregeln sind seit Thema-2 (20.10.2026) vorhanden.
 # P002 Co-Authored-By in den Commit-Texten: bleibt im Arbeitsrepo; beim
 #      Veröffentlichungsklon entfernt git filter-repo --replace-message alle
 #      Co-Authored-By-Zeilen (ENTSCHEIDUNGEN Nr. 10).
