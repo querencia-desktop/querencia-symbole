@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Barrierefreiheit</title>
+  <desc>Symbolthema Querencia: Kreis in Querencia-Orange mit weißer Figur (Thema-2).</desc>
+  <circle cx="32" cy="32" r="27.5" fill="#F07746" stroke="#5a5a5a" stroke-width="4"/>
+  <circle cx="32" cy="15.5" r="5" fill="#ffffff"/>
+  <path d="M16 24 L32 27 L48 24 M32 27 V38 L24 51 M32 38 L40 51" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Büro</title>
+  <desc>Symbolthema Querencia: Blatt mit Balkendiagramm in Querencia-Orange (Thema-2).</desc>
+  <rect x="10" y="4" width="44" height="56" rx="4" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="4"/>
+  <rect x="17" y="11" width="30" height="4" rx="2" fill="#9a9a9a"/>
+  <rect x="17" y="19" width="22" height="4" rx="2" fill="#9a9a9a"/>
+  <rect x="17" y="38" width="7" height="15" fill="#F07746"/>
+  <rect x="28.5" y="30" width="7" height="23" fill="#F07746"/>
+  <rect x="40" y="43" width="7" height="10" fill="#5a5a5a"/>
+</svg>

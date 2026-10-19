@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Persönlicher Ordner</title>
+  <desc>Symbolthema Querencia: Ordner mit Haus (Thema-2).</desc>
+  <!-- Rückwand mit Reiter -->
+  <path d="M6 50 V13 A3 3 0 0 1 9 10 H23 L28 15 H55 A3 3 0 0 1 58 18 V50 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Vorderseite -->
+  <rect x="6" y="21" width="52" height="35" rx="3" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="9" y="24" width="46" height="2.5" fill="#f59a72"/>
+  <!-- Zeichen -->
+  <path d="M32 26.5 L45 37.5 H41 V49 H23 V37.5 H19 Z" fill="#ffffff"/>
+  <rect x="29" y="41" width="6" height="8" fill="#F07746"/>
+</svg>

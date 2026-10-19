@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Server</title>
+  <desc>Symbolthema Querencia: Rechnergehäuse stehend mit Laufwerksschächten und orangen Leuchten (Thema-2).</desc>
+  <rect x="15" y="3" width="34" height="58" rx="3.5" fill="#8c8c8c" stroke="#3c3c3c" stroke-width="3"/>
+  <rect x="20" y="9" width="24" height="7" rx="1.5" fill="#c8c8c8"/>
+  <rect x="20" y="20" width="24" height="7" rx="1.5" fill="#c8c8c8"/>
+  <rect x="20" y="31" width="24" height="7" rx="1.5" fill="#c8c8c8"/>
+  <circle cx="24" cy="51" r="3" fill="#F07746"/>
+  <circle cx="32" cy="51" r="3" fill="#F07746"/>
+</svg>

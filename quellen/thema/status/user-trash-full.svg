@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Papierkorb, voll</title>
+  <desc>Symbolthema Querencia: Papierkorb ohne Deckel mit Papier, eines in Querencia-Orange (Thema-2).</desc>
+  <!-- Papier -->
+  <path d="M30 22 L34 3 L52 7 L47 24 Z" fill="#ffffff" stroke="#5a5a5a" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="23" cy="13" r="10" fill="#F07746" stroke="#5a5a5a" stroke-width="2.5"/>
+  <!-- Eimer -->
+  <path d="M13 19 H51 L47 57.5 A3 3 0 0 1 44 60 H20 A3 3 0 0 1 17 57.5 Z" fill="#c9c6c2" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M25 25 L26 54 M32 25 V54 M39 25 L38 54" fill="none" stroke="#8c8c8c" stroke-width="3" stroke-linecap="round"/>
+  <!-- Rand -->
+  <rect x="10" y="17" width="44" height="5" rx="2" fill="#9a9a9a" stroke="#5a5a5a" stroke-width="3"/>
+</svg>

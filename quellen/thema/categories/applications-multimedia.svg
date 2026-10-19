@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Multimedia</title>
+  <desc>Symbolthema Querencia: Filmklappe grau mit orangem Abspielzeichen (Thema-2).</desc>
+  <!-- Klappe -->
+  <path d="M5 14 L55 4 L57 13 L7 23 Z" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M15 12.5 L22 19 M27 10 L34 16.5 M39 7.5 L46 14" fill="none" stroke="#5a5a5a" stroke-width="4"/>
+  <!-- Körper -->
+  <rect x="5" y="24" width="54" height="35" rx="3" fill="#5a5a5a" stroke="#3c3c3c" stroke-width="3"/>
+  <path d="M26 31 L42 41.5 L26 52 Z" fill="#F07746" stroke="#F07746" stroke-width="2" stroke-linejoin="round"/>
+</svg>

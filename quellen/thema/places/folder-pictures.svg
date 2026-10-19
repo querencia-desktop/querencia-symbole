@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Bilder</title>
+  <desc>Symbolthema Querencia: Ordner mit Bild (Thema-2).</desc>
+  <!-- Rückwand mit Reiter -->
+  <path d="M6 50 V13 A3 3 0 0 1 9 10 H23 L28 15 H55 A3 3 0 0 1 58 18 V50 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Vorderseite -->
+  <rect x="6" y="21" width="52" height="35" rx="3" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="9" y="24" width="46" height="2.5" fill="#f59a72"/>
+  <!-- Zeichen -->
+  <rect x="20" y="29" width="24" height="19" rx="1.5" fill="#ffffff"/>
+  <path d="M22.5 45.5 L29 37 L33.5 42 L36.5 39 L41.5 45.5 Z" fill="#F07746"/>
+  <circle cx="37.5" cy="33.5" r="2.6" fill="#F07746"/>
+</svg>

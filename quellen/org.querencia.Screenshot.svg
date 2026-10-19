@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Querencia Bildschirmfoto</title>
+  <desc id="description">Kamera nach gnome-screenshot: Gehäuse grau, Objektivring in Querencia-Orange (#F07746), flächig (Thema-2).</desc>
+  <!-- Sucher und Gehäuse -->
+  <path d="M21 15 L25.5 8 H38.5 L43 15 Z" fill="#5a5a5a" stroke="#5a5a5a" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="4" y="14" width="56" height="40" rx="5" fill="#5a5a5a"/>
+  <!-- Blitz -->
+  <rect x="9" y="19" width="9" height="5" rx="1.5" fill="#f4f3f1"/>
+  <!-- Objektiv -->
+  <circle cx="32" cy="34" r="15" fill="#f4f3f1"/>
+  <circle cx="32" cy="34" r="11.5" fill="#F07746"/>
+  <circle cx="32" cy="34" r="6" fill="#3c3c3c"/>
+  <circle cx="29.5" cy="31.5" r="2" fill="#f4f3f1"/>
+</svg>

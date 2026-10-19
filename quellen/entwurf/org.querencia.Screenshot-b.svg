@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Querencia Bildschirmfoto, Variante B</title>
+  <desc>Kamera vor Bildschirm-Auswahlecken in Querencia-Orange (#F07746), flächig (Thema-2, Entwurf).</desc>
+  <!-- Auswahlecken -->
+  <path d="M4 16 V4 H16 M48 4 H60 V16 M60 48 V60 H48 M16 60 H4 V48" fill="none" stroke="#F07746" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Kamera -->
+  <path d="M24 20 L27 15 H37 L40 20 Z" fill="#5a5a5a" stroke="#5a5a5a" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="12" y="19" width="40" height="29" rx="4" fill="#5a5a5a"/>
+  <circle cx="32" cy="33.5" r="11" fill="#f4f3f1"/>
+  <circle cx="32" cy="33.5" r="7" fill="#3c3c3c"/>
+  <circle cx="29.5" cy="31" r="2" fill="#f4f3f1"/>
+</svg>

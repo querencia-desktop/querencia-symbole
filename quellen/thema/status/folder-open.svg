@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Ordner, offen</title>
+  <desc>Symbolthema Querencia: geöffneter Ordner mit Blatt (Thema-2).</desc>
+  <!-- Rückwand mit Reiter -->
+  <path d="M6 50 V13 A3 3 0 0 1 9 10 H23 L28 15 H55 A3 3 0 0 1 58 18 V50 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Blatt -->
+  <rect x="12" y="15" width="38" height="30" rx="1.5" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="2.5"/>
+  <!-- Vorderseite, aufgeklappt -->
+  <path d="M10 27 H60 L54 56 H4 Z" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+</svg>

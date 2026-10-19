@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Warnung</title>
+  <desc>Symbolthema Querencia: Dreieck in Querencia-Orange mit dunklem Ausrufezeichen (Thema-2).</desc>
+  <path d="M32 5 L60 56 H4 Z" fill="#F07746" stroke="#5a5a5a" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="28" y="20" width="8" height="20" rx="3" fill="#3c3c3c"/>
+  <circle cx="32" cy="47" r="4.3" fill="#3c3c3c"/>
+</svg>

@@ -1,0 +1,111 @@
+# Symbolthema Querencia (Thema-2): eigene Symbolnamen und ihre Quelle.
+# Zeile: <Kontext> <Symbolname> <Quelle relativ zu quellen/>
+# Mehrere Namen dürfen dieselbe Quelle haben (Aliasnamen älterer Themen).
+# Alles, was hier fehlt, erbt das Thema von gnome-human, dann hicolor.
+#
+# Übernommen (byte-gleich, Ordner thema/uebernommen/) aus querencia-runtime
+# main 52f177c (19.10.2026), damit Thema, Panel und Desktop dieselben Bilder
+# zeigen:
+#   strata-querencia-*.svg  crates/querencia-desktop/data/icons/ (QE-03)
+#   netzwerk-*.svg          crates/querencia-netzwerk/data/symbole/ (G2-M)
+#   lautstaerke-*.svg       crates/querencia-lautstaerke/data/symbole/ (G2-J)
+#   querencia-logo.svg      crates/querencia-panel/data/logo/ (Logo C2)
+
+# ---- Programme (Querencia)
+apps org.querencia.Files org.querencia.Files.svg
+apps io.github.lgse.Strata org.querencia.Files.svg
+apps org.querencia.Terminal org.querencia.Terminal.svg
+apps org.querencia.Screenshot org.querencia.Screenshot.svg
+apps org.querencia.Systemmonitor org.querencia.Systemmonitor.svg
+apps org.querencia.Einstellungen org.querencia.Einstellungen.svg
+apps org.querencia.Editor org.querencia.Editor.svg
+apps org.querencia.Bilder org.querencia.Bilder.svg
+apps org.querencia.Sitzung org.querencia.Sitzung.svg
+apps org.querencia.Lautstaerke org.querencia.Lautstaerke.svg
+# allgemeine Namen, die heutige Starter noch tragen
+apps system-file-manager org.querencia.Files.svg
+apps utilities-terminal org.querencia.Terminal.svg
+apps applets-screenshooter org.querencia.Screenshot.svg
+
+# ---- Orte
+places folder thema/places/folder.svg
+places user-home thema/places/user-home.svg
+places user-desktop thema/places/user-desktop.svg
+places folder-documents thema/places/folder-documents.svg
+places folder-pictures thema/places/folder-pictures.svg
+places folder-music thema/places/folder-music.svg
+places folder-videos thema/places/folder-videos.svg
+places folder-download thema/places/folder-download.svg
+places folder-downloads thema/places/folder-download.svg
+places folder-remote thema/places/folder-remote.svg
+places network-workgroup thema/places/network-workgroup.svg
+places user-trash thema/places/user-trash.svg
+status folder-open thema/status/folder-open.svg
+status folder-drag-accept thema/status/folder-open.svg
+status user-trash-full thema/status/user-trash-full.svg
+
+# ---- Geräte
+devices computer thema/devices/computer.svg
+devices network-server thema/devices/network-server.svg
+devices drive-harddisk thema/uebernommen/strata-querencia-drive-harddisk.svg
+devices drive-harddisk-encrypted thema/uebernommen/strata-querencia-drive-encrypted.svg
+devices drive-removable-media thema/uebernommen/strata-querencia-drive-removable.svg
+devices drive-removable-media-usb thema/uebernommen/strata-querencia-drive-removable.svg
+devices drive-harddisk-usb thema/uebernommen/strata-querencia-drive-removable.svg
+devices media-flash thema/uebernommen/strata-querencia-drive-removable.svg
+devices media-optical thema/uebernommen/strata-querencia-media-optical.svg
+devices media-optical-cd-rom thema/uebernommen/strata-querencia-media-optical.svg
+devices drive-optical thema/uebernommen/strata-querencia-media-optical.svg
+devices network-wired thema/uebernommen/netzwerk-kabel.svg
+devices network-wireless thema/uebernommen/netzwerk-wlan-3.svg
+
+# ---- Netzwerkstatus
+status network-idle thema/uebernommen/netzwerk-kabel.svg
+status network-transmit-receive thema/uebernommen/netzwerk-kabel.svg
+status network-offline thema/uebernommen/netzwerk-kabel-getrennt.svg
+status network-wired-disconnected thema/uebernommen/netzwerk-kabel-getrennt.svg
+status network-error thema/uebernommen/netzwerk-kein-netz.svg
+status network-wired-acquiring thema/uebernommen/netzwerk-verbindet.svg
+status network-wireless-acquiring thema/uebernommen/netzwerk-verbindet.svg
+status network-wireless-signal-none thema/uebernommen/netzwerk-wlan-0.svg
+status network-wireless-signal-weak thema/uebernommen/netzwerk-wlan-1.svg
+status network-wireless-signal-ok thema/uebernommen/netzwerk-wlan-2.svg
+status network-wireless-signal-good thema/uebernommen/netzwerk-wlan-3.svg
+status network-wireless-signal-excellent thema/uebernommen/netzwerk-wlan-3.svg
+status network-wireless-offline thema/uebernommen/netzwerk-wlan-aus.svg
+status network-wireless-disconnected thema/uebernommen/netzwerk-wlan-aus.svg
+
+# ---- Lautstärke
+status audio-volume-muted thema/uebernommen/lautstaerke-stumm.svg
+status audio-volume-low thema/uebernommen/lautstaerke-leise.svg
+status audio-volume-medium thema/uebernommen/lautstaerke-mittel.svg
+status audio-volume-high thema/uebernommen/lautstaerke-laut.svg
+
+# ---- Meldungen und Benachrichtigung
+status dialog-information thema/status/dialog-information.svg
+status dialog-warning thema/status/dialog-warning.svg
+status dialog-error thema/status/dialog-error.svg
+apps preferences-desktop-notification thema/apps/preferences-desktop-notification.svg
+
+# ---- Logo (C2-Q statt Debian-Spirale; querencia-panel/data/logo/querencia-logo.svg)
+places start-here thema/uebernommen/querencia-logo.svg
+places distributor-logo thema/uebernommen/querencia-logo.svg
+
+# ---- Menükategorien und Panel-Einstellungen (Namen aus genutzt.txt)
+categories applications-accessories thema/categories/applications-accessories.svg
+categories applications-development thema/categories/applications-development.svg
+categories applications-games thema/categories/applications-games.svg
+categories applications-graphics thema/categories/applications-graphics.svg
+categories applications-internet thema/categories/applications-internet.svg
+categories applications-multimedia thema/categories/applications-multimedia.svg
+categories applications-office thema/categories/applications-office.svg
+categories applications-science thema/categories/applications-science.svg
+categories applications-system thema/categories/applications-system.svg
+categories applications-utilities thema/categories/applications-system.svg
+categories applications-other thema/categories/applications-other.svg
+categories preferences-desktop thema/categories/preferences-desktop.svg
+categories preferences-system thema/categories/preferences-system.svg
+apps preferences-desktop-accessibility thema/apps/preferences-desktop-accessibility.svg
+apps preferences-system-windows thema/apps/preferences-system-windows.svg
+apps preferences-desktop-workspaces thema/apps/preferences-desktop-workspaces.svg
+apps preferences-system-time thema/apps/preferences-system-time.svg

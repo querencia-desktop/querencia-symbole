@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Downloads</title>
+  <desc>Symbolthema Querencia: Ordner mit Pfeil nach unten (Thema-2).</desc>
+  <!-- Rückwand mit Reiter -->
+  <path d="M6 50 V13 A3 3 0 0 1 9 10 H23 L28 15 H55 A3 3 0 0 1 58 18 V50 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Vorderseite -->
+  <rect x="6" y="21" width="52" height="35" rx="3" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="9" y="24" width="46" height="2.5" fill="#f59a72"/>
+  <!-- Zeichen -->
+  <path d="M28.5 27 H35.5 V36 H41.5 L32 46 L22.5 36 H28.5 Z" fill="#ffffff" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="22" y="48.5" width="20" height="3" rx="1.5" fill="#ffffff"/>
+</svg>

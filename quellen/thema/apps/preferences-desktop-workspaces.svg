@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Arbeitsflächen</title>
+  <desc>Symbolthema Querencia: vier Felder, das aktive in Querencia-Orange (Thema-2).</desc>
+  <rect x="4" y="8" width="26" height="22" rx="2.5" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="34" y="8" width="26" height="22" rx="2.5" fill="#c9c6c2" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="4" y="34" width="26" height="22" rx="2.5" fill="#c9c6c2" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="34" y="34" width="26" height="22" rx="2.5" fill="#c9c6c2" stroke="#5a5a5a" stroke-width="3.5"/>
+</svg>

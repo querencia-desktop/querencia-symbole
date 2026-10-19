@@ -1,0 +1,56 @@
+# Symbolnamen, die Panel, Desktop und Lautstärkeregler abfragen
+# (querencia-runtime main 52f177c, grep nach icon_name/from_icon_name/
+# themed()/icon: "…" in crates/querencia-{panel,desktop,lautstaerke}/src,
+# nur gelesen). Zeile: <Name> <Fundstelle>
+# Namen, die nur zur Einordnung von Datenträgern dienen (volumes.rs: has()),
+# stehen nicht hier, weil der Desktop sie nicht anzeigt.
+application-exit panel/src/session.rs:75
+application-x-addon panel/src/add_dialog.rs:35
+application-x-executable desktop/src/desktop_view.rs:2382
+applications-accessories panel/src/apps.rs:43
+applications-development panel/src/apps.rs:49
+applications-games panel/src/apps.rs:45
+applications-graphics panel/src/apps.rs:46
+applications-internet panel/src/apps.rs:47
+applications-multimedia panel/src/apps.rs:50
+applications-office panel/src/apps.rs:48
+applications-other panel/src/apps.rs:53
+applications-science panel/src/apps.rs:44
+applications-system panel/src/apps.rs:51
+audio-input-microphone lautstaerke/src/main.rs:476
+audio-volume-high panel/src/applets.rs:191
+audio-volume-muted panel/src/volume_applet.rs:222
+audio-x-generic lautstaerke/src/main.rs:474
+computer panel/src/places_menu.rs:50, desktop/src/desktop_view.rs:2376
+emblem-ok desktop/src/desktop_view.rs:1319
+folder panel/src/places_menu.rs:53, panel/src/applets.rs:94
+folder-documents panel/src/places_menu.rs:45
+folder-download panel/src/places_menu.rs:49
+folder-music panel/src/places_menu.rs:46
+folder-pictures panel/src/places_menu.rs:47
+folder-remote desktop/src/desktop_view.rs:2411
+folder-videos panel/src/places_menu.rs:48
+gnome-calculator panel/src/window_icons.rs:182
+go-next panel/src/add_dialog.rs:178
+go-previous panel/src/app_chooser.rs:126
+help-about panel/src/system_menu.rs:100
+list-add panel/src/app_chooser.rs:128
+network-server desktop/src/desktop_view.rs:2411
+network-wired panel/src/network_applet.rs:566, panel/src/applets.rs:211
+network-wireless panel/src/network_dialogs.rs:281
+network-workgroup panel/src/places_menu.rs:51
+preferences-desktop panel/src/system_menu.rs:89
+preferences-desktop-accessibility panel/src/apps.rs:52
+preferences-desktop-workspaces panel/src/applets.rs:136
+preferences-system panel/src/system_menu.rs:90, panel/src/applets.rs:108
+preferences-system-time panel/src/applets.rs:150
+preferences-system-windows panel/src/applets.rs:122
+process-stop panel/src/network_dialogs.rs:280
+system-log-out panel/src/system_menu.rs:105
+system-run panel/src/applets.rs:168
+text-x-generic desktop/src/desktop_view.rs:2397
+user-desktop panel/src/places_menu.rs:44
+user-home panel/src/places_menu.rs:43, desktop/src/desktop_view.rs:2377
+user-trash panel/src/places_menu.rs:52, desktop/src/desktop_view.rs:2098
+user-trash-full desktop/src/desktop_view.rs:2096
+window-close panel/src/app_chooser.rs:127

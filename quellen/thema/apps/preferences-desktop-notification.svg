@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Benachrichtigungen</title>
+  <desc>Symbolthema Querencia: Sprechblase grau umrandet mit orangem Punkt (Thema-2).</desc>
+  <path d="M8 8 H56 A4 4 0 0 1 60 12 V40 A4 4 0 0 1 56 44 H26 L14 56 V44 H8 A4 4 0 0 1 4 40 V12 A4 4 0 0 1 8 8 Z" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="13" y="18" width="24" height="5" rx="2.5" fill="#9a9a9a"/>
+  <rect x="13" y="29" width="18" height="5" rx="2.5" fill="#9a9a9a"/>
+  <circle cx="48" cy="26" r="7" fill="#F07746"/>
+</svg>

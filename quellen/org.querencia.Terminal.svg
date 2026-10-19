@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Querencia Terminal</title>
+  <desc id="description">Terminalfenster nach gnome-terminal 2: grauer Rahmen, dunkle Fläche, Eingabeaufforderung hell mit Schreibmarke in Querencia-Orange (#F07746), flächig (Thema-2).</desc>
+  <!-- Fenster -->
+  <rect x="4" y="7" width="56" height="50" rx="4" fill="#5a5a5a"/>
+  <rect x="9" y="16" width="46" height="36" rx="1.5" fill="#2e2e2e"/>
+  <!-- Titelleiste -->
+  <rect x="9" y="10" width="20" height="3" rx="1.5" fill="#9a9a9a"/>
+  <!-- Eingabeaufforderung -->
+  <path d="M16 24 L25 31.5 L16 39" fill="none" stroke="#f4f3f1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Schreibmarke -->
+  <rect x="29" y="38" width="16" height="5" rx="1" fill="#F07746"/>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Information</title>
+  <desc>Symbolthema Querencia: grauer Kreis mit weißem i, Punkt in Querencia-Orange (Thema-2).</desc>
+  <circle cx="32" cy="32" r="27.5" fill="#5a5a5a" stroke="#3c3c3c" stroke-width="3"/>
+  <circle cx="32" cy="18" r="5" fill="#F07746"/>
+  <rect x="27.5" y="27" width="9" height="23" rx="2.5" fill="#ffffff"/>
+</svg>

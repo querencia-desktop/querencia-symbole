@@ -76,7 +76,10 @@ def main() -> int:
             os.makedirs(os.path.dirname(gtk4), exist_ok=True)
             with open(gtk4, "w") as f:
                 f.write(f"[Settings]\ngtk-font-name={schrift}\n")
-    runtime = tempfile.mkdtemp(prefix="qed-runtime-", dir=os.path.expanduser("~/projects/querencia-symbole/laufzeit"))
+    # Laufzeitordner im eigenen Checkout (main oder Worktree), nicht unter /run/user.
+    laufzeit = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "laufzeit")
+    os.makedirs(laufzeit, exist_ok=True)
+    runtime = tempfile.mkdtemp(prefix="qed-runtime-", dir=laufzeit)
     os.chmod(runtime, 0o700)
 
     env = {k: v for k, v in os.environ.items()
