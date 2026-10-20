@@ -45,9 +45,15 @@ places folder thema/places/folder.svg
 places user-home thema/places/user-home.svg
 # user-desktop ist ab 0.7 die Arbeitsfläche mit Leiste und zwei minimierten
 # Fenstern: Panel-Knopf „Arbeitsfläche anzeigen“ (querencia-panel
-# arbeitsflaeche_zeigen.rs ICON) und Ordner „Schreibtisch“ zugleich
+# arbeitsflaeche_zeigen.rs ICON) und Ordner „Arbeitsfläche“ zugleich
+# (Entscheidung der Startsession 21.10.2026: Variante A wie GNOME 2/Human).
+# show-desktop ist ein Alias auf dasselbe Bild, damit ein späterer
+# Runtime-Auftrag Knopf und Ordner trennen kann, ohne das Thema anzufassen.
+# Namen auf -symbolic baut thema-bauen.py nur als SVG (GTK färbt sie um).
 places user-desktop thema/places/user-desktop.svg
 places user-desktop-symbolic thema/places/user-desktop-symbolic.svg
+places show-desktop thema/places/user-desktop.svg
+places show-desktop-symbolic thema/places/user-desktop-symbolic.svg
 places folder-documents thema/places/folder-documents.svg
 places folder-pictures thema/places/folder-pictures.svg
 places folder-music thema/places/folder-music.svg

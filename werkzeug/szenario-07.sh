@@ -1,8 +1,10 @@
 #!/bin/bash
 # Symbole 0.7: Belegbilder – unteres Panel mit dem Knopf „Arbeitsfläche
-# anzeigen“ (ohne und mit Fenstern, Knopf gedrückt), Menü Orte (Schreibtisch),
-# Anwendungsmenü mit jeder Kategorie (Zeilen 0–9 nacheinander überfahren),
-# dazu symbol-nachschlagen.py: welche Datei GTK je Name und Größe lädt.
+# anzeigen“ (ohne und mit Fenstern, Knopf gedrückt), Menü Orte (Ordner
+# Arbeitsfläche), Anwendungsmenü mit jeder Kategorie (Zeilen 0–9 nacheinander
+# überfahren), Desktop, Querencia Files (Seitenleiste) und der
+# GTK-Dateiwähler (user-desktop-symbolic); dazu symbol-nachschlagen.py:
+# welche Datei GTK je Name und Größe lädt.
 # Beendet wird alles über die eigene Prozessgruppe (isoliert.py).
 set -u
 . "$HMP04_PROFILE/env.sh"
@@ -13,7 +15,7 @@ gsettings set org.gnome.desktop.interface icon-theme Querencia
 pt() { echo "move $(( $1 * 1280 / B )) $(( $2 * 720 / H ))"; }
 panel_start() { "$PANEL" >>"$OUT/panel.log" 2>&1 & PAN=$!; sleep 4; }
 panel_neu() { kill "$PAN"; wait "$PAN" 2>/dev/null; panel_start; }
-python3 -I "$W/symbol-nachschlagen.py" 16,22,24,32,48 user-desktop user-desktop-symbolic \
+python3 -I "$W/symbol-nachschlagen.py" 16,22,24,32,48 user-desktop user-desktop-symbolic show-desktop show-desktop-symbolic \
     org.querencia.Archiv org.querencia.Software org.querencia.Dateisuche org.querencia.Rechner org.querencia.Kuerzel \
     >"$OUT/nachschlagen.txt" 2>&1
 ~/opt/querencia/bin/querencia-desktop >>"$OUT/desktop.log" 2>&1 &
@@ -41,4 +43,14 @@ for k in 0 1 2 3 4 5 6 7 8 9; do
     y=$((46 + 24 * k))
     q "$(pt 80 "$y")" "wait 400" "$(pt 120 "$y")" "wait 1200"; grim "$OUT/m1$k-kategorie-$k-$RES.png"
 done
+panel_neu
+q "$(pt $((B/2)) $((H/2)))" "wait 300"
+grim "$OUT/d00-desktop-$RES.png"
+# Querencia Files (Seitenleiste mit dem Ordner Arbeitsfläche)
+starte io.github.lgse.Strata.desktop; sleep 3
+grim "$OUT/f00-files-$RES.png"
+# GTK-Dateiwähler (Orte mit user-desktop-symbolic)
+python3 -I "$W/dateiwahl-zeigen.py" 8 >"$OUT/dateiwahl.log" 2>&1 & sleep 4
+grim "$OUT/g00-dateiwahl-$RES.png"
+sleep 5
 touch "$HMP04_PROFILE/logs/FERTIG"

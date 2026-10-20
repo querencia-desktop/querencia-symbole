@@ -4,7 +4,10 @@
 Je Name: PNG-Stufen 16, 22, 24, 32, 64, 128, 256 (NIE 48x48, GTK-4.22-
 Symbolabsturz) nach <ziel>/Querencia/<N>x<N>/<kontext>/<name>.png und das SVG
 nach <ziel>/Querencia/scalable/<kontext>/<name>.svg, dazu index.theme
-(Inherits=gnome-human,hicolor). Offline über GdkPixbuf wie werkzeug/rendern.py;
+(Inherits=gnome-human,hicolor). Namen auf -symbolic (ab 0.7) nur als SVG:
+GTK 4 färbt symbolische Symbole nur aus SVG in der Schriftfarbe um, eine
+PNG-Stufe gleicher Größe hätte Vorrang und bliebe grau.
+Offline über GdkPixbuf wie werkzeug/rendern.py;
 PNGs ohne tEXt-Felder, damit der Bau reproduzierbar ist.
 Aufruf: python3 -I thema-bauen.py <quellordner> <ziel>"""
 import os
@@ -74,7 +77,7 @@ def main() -> int:
     kontexte = sorted({k for k, _, _ in eintraege})
     for kontext, name, rel in eintraege:
         svg = os.path.join(quelle, rel)
-        for n in STUFEN:
+        for n in () if name.endswith("-symbolic") else STUFEN:
             assert n != 48
             ordner = os.path.join(thema, f"{n}x{n}", kontext)
             os.makedirs(ordner, exist_ok=True)

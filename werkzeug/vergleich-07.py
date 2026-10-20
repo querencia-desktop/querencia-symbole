@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Symbole 0.7: Vergleichsbilder für den Bericht aus den Belegläufen
-ausgang-<B> und neu-<B> (nachweis/symbole-07/belege/): Ausschnitte
-nebeneinander (links Stand 0.6, rechts 0.7), vergrößert ohne Glättung.
-Aufruf: python3 -I vergleich-07.py <belege> <B> <BxH> <ziel>"""
+"""Symbole 0.7: Vergleichsbilder für den Bericht aus zwei Belegläufen
+(nachweis/symbole-07/belege/<ausgang>, <neu>): Ausschnitte nebeneinander
+(links Stand 0.6, rechts 0.7), vergrößert ohne Glättung. Files-Seitenleiste
+und Desktop nur, wenn der Lauf sie hat (szenario-07.sh ab dem Alias).
+Aufruf: python3 -I vergleich-07.py <belege> <ausgang> <neu> <BxH> <ziel>"""
 import os
 import sys
 
@@ -12,6 +13,8 @@ gi.require_version("GdkPixbuf", "2.0")
 from gi.repository import GdkPixbuf  # noqa: E402
 
 RAND = 8
+# Seitenleiste von Querencia Files (x, y, b, h) je Auflösung
+FILES = {"1024x768": (0, 155, 205, 235), "1920x1080": (360, 270, 205, 235)}
 
 
 def ausschnitt(datei, x, y, b, h, f):
@@ -35,10 +38,10 @@ def nebeneinander(zeilen, ziel):
 
 
 def main() -> int:
-    belege, b, res, ziel = sys.argv[1:5]
+    belege, ausgang, neu, res, ziel = sys.argv[1:6]
     h = int(res.split("x")[1])
     os.makedirs(ziel, exist_ok=True)
-    a, n = os.path.join(belege, f"ausgang-{b}"), os.path.join(belege, f"neu-{b}")
+    a, n = os.path.join(belege, ausgang), os.path.join(belege, neu)
     knopf = [[ausschnitt(os.path.join(d, f"{p}-{res}.png"), 0, 0, 120, 32, 4) for d in (a, n)]
              for p in ("p01-knopf", "p02-knopf-mit-fenstern", "p04-knopf-gedrueckt")]
     nebeneinander(knopf, os.path.join(ziel, f"knopf-vorher-nachher-{res}.png"))
@@ -48,6 +51,12 @@ def main() -> int:
     nebeneinander(zubehoer, os.path.join(ziel, f"zubehoer-vorher-nachher-{res}.png"))
     leiste = [[ausschnitt(os.path.join(d, f"p03-nach-klick-{res}.png"), 0, h - 32, 460, 32, 2)] for d in (a, n)]
     nebeneinander(leiste, os.path.join(ziel, f"leiste-nach-klick-vorher-nachher-{res}.png"))
+    if os.path.exists(os.path.join(n, f"f00-files-{res}.png")):
+        x, y, bb, hh = FILES[res]
+        files = [[ausschnitt(os.path.join(d, f"f00-files-{res}.png"), x, y, bb, hh, 2) for d in (a, n)]]
+        nebeneinander(files, os.path.join(ziel, f"files-vorher-nachher-{res}.png"))
+        desktop = [[ausschnitt(os.path.join(d, f"d00-desktop-{res}.png"), 0, 32, 120, 380, 2) for d in (a, n)]]
+        nebeneinander(desktop, os.path.join(ziel, f"desktop-vorher-nachher-{res}.png"))
     return 0
 
 

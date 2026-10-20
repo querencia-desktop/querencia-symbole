@@ -87,7 +87,8 @@ neben=$(nebenstand)
 lauf 0 bash "$SKRIPT" aktivieren
 pruef "$(zust)" neu "nach aktivieren"
 pruef "$(liste "$Q")" "$(liste "$Z/vorlage/neu/Querencia")" "Querencia = vorlage/neu"
-pruef "$(find "$Q" -type f | wc -l)" 713 "Dateien im Thema"
+pruef "$(find "$Q" -type f | wc -l)" 715 "Dateien im Thema"
+pruef "$(find "$Q" -name "*-symbolic.png" | wc -l)" 0 "symbolisch nur als SVG"
 pruef "$(find "$Q" \( -type d ! -perm 0755 \) -o \( -type f ! -perm 0644 \) | wc -l)" 0 "Rechte 0755/0644"
 pruef "$(find "$Q" -path '*48x48*' | wc -l)" 0 "kein 48x48"
 pruef "$(nebenstand)" "$neben" "hicolor und Starter unberührt"
@@ -123,7 +124,7 @@ pruef "$(grep -c 'UNVOLLSTÄNDIG' "$SYM_OPT/protokoll.txt")" 0 "Journal: kein un
 FALL=E-zurueck; baum e2; nutze e2
 lauf 0 bash "$SKRIPT" aktivieren
 soll=$(stand)
-fehler zurueck-0.6 "$soll" vor-erstem datei-1 weg-scalable/apps/org.querencia.Archiv.svg weg-16x16/places/user-desktop-symbolic.png nach-angleichen nach-touch signal-datei-8 signal-weg-64x64/apps/org.querencia.Kuerzel.png signal-nach-touch
+fehler zurueck-0.6 "$soll" vor-erstem datei-1 weg-scalable/apps/org.querencia.Archiv.svg weg-scalable/places/show-desktop-symbolic.svg nach-angleichen nach-touch signal-datei-8 signal-weg-64x64/apps/org.querencia.Kuerzel.png signal-nach-touch
 pruef "$(zust)" neu "nach allen Fehlern"
 
 echo "################ F: fremde Stände, Vorlage, Sperren"

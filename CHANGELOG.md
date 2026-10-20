@@ -10,13 +10,18 @@ die Fassungen vor allem das Einrichten in der Entwicklungsumgebung
 ### Hinzugefügt
 - Thema Querencia: `user-desktop` neu als Arbeitsfläche mit Leiste und zwei
   minimierten Fenstern (Panel-Knopf „Arbeitsfläche anzeigen“, QD-078; zugleich
-  Ordner „Arbeitsfläche“), dazu `user-desktop-symbolic`. Der Ordner-Entwurf
-  bis 0.6 liegt unter `quellen/entwurf/user-desktop-ordner-0.6.svg`.
+  Ordner „Arbeitsfläche“, Entscheidung der Startsession: Variante A wie
+  GNOME 2/Human), dazu `user-desktop-symbolic` und der Alias `show-desktop`
+  (+ `-symbolic`) auf dasselbe Bild für einen späteren Runtime-Auftrag. Der
+  Ordner-Entwurf bis 0.6 liegt unter `quellen/entwurf/user-desktop-ordner-0.6.svg`.
+- `werkzeug/thema-bauen.py`: Namen auf `-symbolic` nur als SVG (GTK 4 färbt
+  nur SVG um).
 - Programmsymbole `org.querencia.{Archiv,Software,Dateisuche,Rechner,Kuerzel}`
   im Thema (byte-gleich aus den Programm-Repos, GPL-3.0-or-later,
   `quellen/thema/programme/HERKUNFT.txt`), 16–256 + SVG, ohne 48×48.
 - Einrichtung `symbole-07-integrieren.sh` im Arbeitsordner
-  `~/projects/querencia-symbole-07/` (Vorlage alt/neu, `zurueck-0.6`).
+  `~/projects/querencia-symbole-07/` (Vorlage alt/neu, `zurueck-0.6`);
+  live seit 21.10.2026 01:03:30.
 
 ## [0.6] – 2026-10-20
 

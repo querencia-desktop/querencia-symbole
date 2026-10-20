@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
   <title>Arbeitsfläche</title>
-  <desc>Symbolthema Querencia (Symbole 0.7): freie Arbeitsfläche in Querencia-Orange, unten die Leiste mit zwei minimierten Fenstern; Zugleich Knopf „Arbeitsfläche anzeigen“ im Panel und Ordner „Schreibtisch“ (ein Name, wie in GNOME 2 und MATE). Raster 22 px (Panelhöhe 32 → 22 px). Vorgänger (Ordner, bis 0.6): quellen/entwurf/user-desktop-ordner-0.6.svg.</desc>
+  <desc>Symbolthema Querencia (Symbole 0.7): freie Arbeitsfläche in Querencia-Orange, unten die Leiste mit zwei minimierten Fenstern; Zugleich Knopf „Arbeitsfläche anzeigen“ im Panel und Ordner „Arbeitsfläche“ (ein Name, wie in GNOME 2 und MATE; Alias show-desktop). Raster 22 px (Panelhöhe 32 → 22 px). Vorgänger (Ordner, bis 0.6): quellen/entwurf/user-desktop-ordner-0.6.svg.</desc>
   <!-- Rahmen der Arbeitsfläche -->
   <rect x="1" y="2" width="20" height="18" rx="1" fill="#3c3c3c"/>
   <!-- freie Fläche -->

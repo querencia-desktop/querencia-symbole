@@ -12,7 +12,8 @@
 #   AENDERUNG.txt          welche Dateien 0.7 setzt (neu oder ersetzt)
 # Prüft: Bau reproduzierbar, keine 48x48; Thema- und 0.6-Vorlage gegen ihre
 # im Skript eingetragenen Prüfsummen; neu = alt + genau die erwarteten
-# Namen (user-desktop ersetzt, user-desktop-symbolic und fünf Programme neu,
+# Namen (user-desktop ersetzt; user-desktop-symbolic, show-desktop,
+# show-desktop-symbolic und fünf Programme neu;
 # nichts entfernt); index.theme unverändert; Programmsymbole byte-gleich mit
 # quellen/thema/programme/HERKUNFT.txt.
 # Verweigert, sobald das Journal symbole-07-integrieren.sh nennt (nach einer
@@ -29,9 +30,9 @@ THEMA_SUMMEN_SHA=5f609c282cfb6da12209669beab59ff12f556ab1d69fbe3cd4e75bc35b51117
 V06_SUMMEN_SHA=32c1e543be7a1f26fc3d2c64b8c20e14482a618317d8e5a16b36aeb320f8edb0
 STUFEN="16x16 22x22 24x24 32x32 64x64 128x128 256x256"
 ERSETZT="places/user-desktop"
-NEU="places/user-desktop-symbolic apps/org.querencia.Archiv apps/org.querencia.Software apps/org.querencia.Dateisuche apps/org.querencia.Rechner apps/org.querencia.Kuerzel"
-KNOPF="user-desktop und user-desktop-symbolic"
-KNOPF_JOURNAL="user-desktop neu (Arbeitsfläche mit Leiste und minimierten Fenstern: Panel-Knopf Arbeitsfläche anzeigen und Ordner Schreibtisch) und user-desktop-symbolic"
+NEU="places/user-desktop-symbolic places/show-desktop places/show-desktop-symbolic apps/org.querencia.Archiv apps/org.querencia.Software apps/org.querencia.Dateisuche apps/org.querencia.Rechner apps/org.querencia.Kuerzel"
+KNOPF="user-desktop und user-desktop-symbolic, Alias show-desktop"
+KNOPF_JOURNAL="user-desktop neu (Arbeitsfläche mit Leiste und minimierten Fenstern: Panel-Knopf Arbeitsfläche anzeigen und Ordner Arbeitsfläche), user-desktop-symbolic, Alias show-desktop(-symbolic)"
 
 if grep -q 'symbole-07-integrieren\.sh' ~/opt/querencia/protokoll.txt 2>/dev/null; then
     echo "Das Journal nennt symbole-07-integrieren.sh – Vorlage eingefroren, neue Fassung als eigene Datei" >&2
@@ -40,9 +41,9 @@ fi
 TMP=$(mktemp -d)
 trap 'chmod -R u+w "$TMP"; rm -rf -- "$TMP"' EXIT
 liste() { (cd "$1" && find . -type f -exec sha256sum {} + | sed 's#  \./#  #' | LC_ALL=C sort); }
-dateien_von() { # <kontext/name> → relative Pfade der 8 Dateien
+dateien_von() { # <kontext/name> → relative Pfade (8 Dateien, -symbolic nur das SVG)
     local g k=${1%%/*} n=${1#*/}
-    for g in $STUFEN; do echo "$g/$k/$n.png"; done
+    case $n in *-symbolic) ;; *) for g in $STUFEN; do echo "$g/$k/$n.png"; done ;; esac
     echo "scalable/$k/$n.svg"
 }
 
