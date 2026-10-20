@@ -28,14 +28,15 @@ Querencia-Orange (#F07746). Sie folgen der GNOME-2-/Human-Optik und sind bei
 ## Benutzung
 
 ```bash
-bash integration/symbole-integrieren.sh pruefen       # Fassung 0.4 (live)
-bash integration/symbole-integrieren-0.5.sh pruefen   # Fassung 0.5 (zusätzlich Files-Starter)
+bash integration/symbole-integrieren-0.5.2.sh pruefen # Fassung 0.5.2 (live seit 20.10.2026 11:01)
 bash integration/thema-integrieren.sh pruefen     # Symbolthema ~/.local/share/icons/Querencia
 ```
 
 `aktivieren` und `zurueck` führt nur die Status-Session nach Freigabe aus
 (`SYM_FREIGABE=ja` bzw. `THM_FREIGABE=ja`). Proben laufen gegen umgelenkte
-Pfade: `werkzeug/symbole-probe-0.5.sh`, `werkzeug/thema-probe.sh`.
+Pfade: `PROBE_SKRIPT=… werkzeug/symbole-probe-0.5.sh`, `werkzeug/thema-probe.sh`.
+Die älteren Fassungen `symbole-integrieren.sh` (0.4) und `symbole-integrieren-0.5.sh`
+(0.5) bleiben unverändert liegen, weil Journalzeilen auf sie zeigen.
 
 Nach einer Änderung an `quellen/thema/` baut `werkzeug/thema-vorlage-erzeugen.sh`
 die Vorlage neu. `werkzeug/thema-uebersicht.py` zeichnet die Übersicht je Größe.
