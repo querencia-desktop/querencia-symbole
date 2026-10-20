@@ -3,7 +3,15 @@
 Format nach [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Die
 Einträge sind aus den Tag-Texten und Commits zusammengefasst; ab 0.4 betreffen
 die Fassungen vor allem das Einrichten in der Entwicklungsumgebung
-(`integration/`), die Symbole selbst änderten sich zuletzt mit 0.3.
+(`integration/`), die Symbole selbst änderten sich mit 0.3 und 0.6.
+
+## [0.6] – 2026-10-20
+
+### Hinzugefügt
+- Eigenes Symbol `org.querencia.Dokumente` (Blatt mit Lupe, neu gezeichnet;
+  Entwurf aus Dokumente 0.1.0 unter `quellen/entwurf/`) im Thema Querencia und
+  in hicolor; Einrichtung über die eigene Datei `symbole-integrieren-0.6.sh`
+  mit eigener Vorlage.
 
 ## [0.5.2] – 2026-10-20
 
