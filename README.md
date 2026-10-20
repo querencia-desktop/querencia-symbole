@@ -16,6 +16,19 @@ Querencia-Orange (#F07746). Sie folgen der GNOME-2-/Human-Optik und sind bei
   `namen.txt` ordnet jedem Namen seine Quelle zu, `genutzt.txt` listet die
   Namen, die Panel und Desktop abfragen.
 
+> **Alpha.** Noch nicht alle Programme haben ein eigenes Symbol im Repo
+> (Dokumente folgt mit 0.6, Archiv als Entwurf im Archiv-Repo).
+
+## Stand
+
+| | |
+|---|---|
+| Version | 0.5.2 (Tag `symbole/0.5.2`) |
+| Auf der Entwicklungs-VM | 0.5.2 live seit 20.10.2026; 0.6 (Symbol `org.querencia.Dokumente`, Tag `symbole/0.6`, Zweig `symbole-06`) geprüft und freigegeben, noch nicht aktiviert |
+| Letzte Prüfung | 0.5.2: Probe 193/0 gegen umgelenkte Pfade, `pruefen` live, Nachkontrolle PASS |
+
+Änderungen je Version: [CHANGELOG.md](CHANGELOG.md).
+
 ## Aufbau
 
 | Ordner | Inhalt |
@@ -41,8 +54,19 @@ Die älteren Fassungen `symbole-integrieren.sh` (0.4) und `symbole-integrieren-0
 Nach einer Änderung an `quellen/thema/` baut `werkzeug/thema-vorlage-erzeugen.sh`
 die Vorlage neu. `werkzeug/thema-uebersicht.py` zeichnet die Übersicht je Größe.
 
+## Bauen und Prüfen
+
+`python3 -I werkzeug/rendern.py <quellordner> <ziel> <name> …` rendert die PNG-Stufen 16–256 (ohne 48), `werkzeug/thema-vorlage-erzeugen.sh` baut die Thema-Vorlage; Proben gegen umgelenkte Pfade mit `werkzeug/symbole-probe-0.5.sh` und `werkzeug/thema-probe.sh`.
+Benutzung der Integrationsskripte siehe „Benutzung“; Belegbilder nur isoliert mit `werkzeug/beleg-lauf-thema2.sh` (headless labwc, eigener Bus, eigenes `HOME`).
+
 ## Lizenz
 
-Noch keine Lizenzdatei: Die Lizenz legt der Besitzer fest. Übernommene Bilder
+Symbole und Symbolthema (`quellen/` und alles daraus Gebaute):
+CC-BY-SA-4.0, siehe [LICENSE](LICENSE); Namensnennung „Querencia Desktop
+contributors“. Werkzeuge in `werkzeug/`: GPL-3.0-or-later, siehe
+`werkzeug/LICENSE` (ENTSCHEIDUNGEN Nr. 19). Rechteinhaber, Vorbehalt für rein
+KI-erzeugte Werke und Hinweise in [COPYRIGHT](COPYRIGHT). Übernommene Bilder
 (Laufwerke, Netzwerk, Lautstärke, Logo) stammen aus querencia-runtime, siehe
-`quellen/thema/namen.txt`. Geschrieben mit KI-Unterstützung.
+`quellen/thema/namen.txt`. Name und Logo „Querencia“ sind keine freien
+Inhalte (Markenregel).
+
