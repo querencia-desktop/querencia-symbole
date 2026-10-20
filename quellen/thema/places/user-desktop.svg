@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <title>Schreibtisch</title>
-  <desc>Symbolthema Querencia: Ordner mit Arbeitsfläche und Leiste (Thema-2).</desc>
-  <!-- Rückwand mit Reiter -->
-  <path d="M6 50 V13 A3 3 0 0 1 9 10 H23 L28 15 H55 A3 3 0 0 1 58 18 V50 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
-  <!-- Vorderseite -->
-  <rect x="6" y="21" width="52" height="35" rx="3" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5"/>
-  <rect x="9" y="24" width="46" height="2.5" fill="#f59a72"/>
-  <!-- Zeichen -->
-  <rect x="19.5" y="28" width="25" height="19" rx="1.5" fill="#ffffff"/>
-  <rect x="19.5" y="43" width="25" height="4" fill="#5a5a5a"/>
-  <rect x="22" y="31" width="5" height="4" fill="#F07746"/>
-  <rect x="22" y="37" width="5" height="4" fill="#F07746"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <title>Arbeitsfläche</title>
+  <desc>Symbolthema Querencia (Symbole 0.7): freie Arbeitsfläche in Querencia-Orange, unten die Leiste mit zwei minimierten Fenstern; Zugleich Knopf „Arbeitsfläche anzeigen“ im Panel und Ordner „Schreibtisch“ (ein Name, wie in GNOME 2 und MATE). Raster 22 px (Panelhöhe 32 → 22 px). Vorgänger (Ordner, bis 0.6): quellen/entwurf/user-desktop-ordner-0.6.svg.</desc>
+  <!-- Rahmen der Arbeitsfläche -->
+  <rect x="1" y="2" width="20" height="18" rx="1" fill="#3c3c3c"/>
+  <!-- freie Fläche -->
+  <rect x="2" y="3" width="18" height="11" fill="#F07746"/>
+  <rect x="2" y="3" width="18" height="2" fill="#f59a72"/>
+  <!-- Leiste mit zwei minimierten Fenstern -->
+  <rect x="2" y="14" width="18" height="5" fill="#5a5a5a"/>
+  <rect x="3" y="15" width="7" height="3" fill="#F07746"/>
+  <rect x="11" y="15" width="7" height="3" fill="#F07746"/>
+  <rect x="3" y="15" width="7" height="1" fill="#f59a72"/>
+  <rect x="11" y="15" width="7" height="1" fill="#f59a72"/>
 </svg>

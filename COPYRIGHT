@@ -10,6 +10,13 @@ Die Werkzeuge in werkzeug/ stehen unter der GNU General Public License,
 Version 3 oder (nach Wahl) jeder späteren Version (GPL-3.0-or-later), Text in
 werkzeug/LICENSE.
 
+Ausnahme (ab 0.7): Die Programmsymbole unter quellen/thema/programme/
+(Archiv, Software, Dateisuche, Rechner, Kürzel) sind byte-gleich aus den
+Repos dieser Programme übernommen und stehen wie diese unter
+GPL-3.0-or-later (Text in werkzeug/LICENSE), ebenso die daraus gebauten
+Dateien org.querencia.{Archiv,Software,Dateisuche,Rechner,Kuerzel}.* im
+Symbolthema. Herkunft und Prüfsummen: quellen/thema/programme/HERKUNFT.txt.
+
 Name und Logo „Querencia“ (auch quellen/thema/uebernommen/querencia-logo.svg)
 sind keine freien Inhalte; es gilt die Markenregel (ENTSCHEIDUNGEN Nr. 5).
 

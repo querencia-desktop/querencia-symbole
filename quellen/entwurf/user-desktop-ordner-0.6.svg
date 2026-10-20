@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Schreibtisch</title>
+  <desc>Symbolthema Querencia: Ordner mit Arbeitsfläche und Leiste (Thema-2).</desc>
+  <!-- Rückwand mit Reiter -->
+  <path d="M6 50 V13 A3 3 0 0 1 9 10 H23 L28 15 H55 A3 3 0 0 1 58 18 V50 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Vorderseite -->
+  <rect x="6" y="21" width="52" height="35" rx="3" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="9" y="24" width="46" height="2.5" fill="#f59a72"/>
+  <!-- Zeichen -->
+  <rect x="19.5" y="28" width="25" height="19" rx="1.5" fill="#ffffff"/>
+  <rect x="19.5" y="43" width="25" height="4" fill="#5a5a5a"/>
+  <rect x="22" y="31" width="5" height="4" fill="#F07746"/>
+  <rect x="22" y="37" width="5" height="4" fill="#F07746"/>
+</svg>

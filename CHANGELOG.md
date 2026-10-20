@@ -3,7 +3,20 @@
 Format nach [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Die
 Einträge sind aus den Tag-Texten und Commits zusammengefasst; ab 0.4 betreffen
 die Fassungen vor allem das Einrichten in der Entwicklungsumgebung
-(`integration/`), die Symbole selbst änderten sich mit 0.3 und 0.6.
+(`integration/`), die Symbole selbst änderten sich mit 0.3, 0.6 und 0.7.
+
+## [0.7] – 2026-10-21
+
+### Hinzugefügt
+- Thema Querencia: `user-desktop` neu als Arbeitsfläche mit Leiste und zwei
+  minimierten Fenstern (Panel-Knopf „Arbeitsfläche anzeigen“, QD-078; zugleich
+  Ordner „Arbeitsfläche“), dazu `user-desktop-symbolic`. Der Ordner-Entwurf
+  bis 0.6 liegt unter `quellen/entwurf/user-desktop-ordner-0.6.svg`.
+- Programmsymbole `org.querencia.{Archiv,Software,Dateisuche,Rechner,Kuerzel}`
+  im Thema (byte-gleich aus den Programm-Repos, GPL-3.0-or-later,
+  `quellen/thema/programme/HERKUNFT.txt`), 16–256 + SVG, ohne 48×48.
+- Einrichtung `symbole-07-integrieren.sh` im Arbeitsordner
+  `~/projects/querencia-symbole-07/` (Vorlage alt/neu, `zurueck-0.6`).
 
 ## [0.6] – 2026-10-20
 

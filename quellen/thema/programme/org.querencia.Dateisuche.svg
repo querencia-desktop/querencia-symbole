@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Querencia Dateisuche</title>
+  <desc id="description">Lupe über einem Dokument: Querencia-Orange (#F07746) und Grau, flächig.</desc>
+  <!-- Dokument mit Eselsohr -->
+  <path d="M10 4 H36 L48 16 V56 a4 4 0 0 1 -4 4 H14 a4 4 0 0 1 -4 -4 Z" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M36 4 V16 H48" fill="#c9c6c2" stroke="#5a5a5a" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Textzeilen -->
+  <rect x="17" y="24" width="18" height="4" rx="2" fill="#9a9a9a"/>
+  <rect x="17" y="33" width="14" height="4" rx="2" fill="#9a9a9a"/>
+  <!-- Lupe: Griff grau, Ring orange -->
+  <line x1="47" y1="47" x2="59" y2="59" stroke="#5a5a5a" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="38" cy="38" r="13" fill="#ffffff" stroke="#F07746" stroke-width="6"/>
+</svg>

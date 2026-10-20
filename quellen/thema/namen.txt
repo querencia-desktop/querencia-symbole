@@ -10,6 +10,12 @@
 #   netzwerk-*.svg          crates/querencia-netzwerk/data/symbole/ (G2-M)
 #   lautstaerke-*.svg       crates/querencia-lautstaerke/data/symbole/ (G2-J)
 #   querencia-logo.svg      crates/querencia-panel/data/logo/ (Logo C2)
+#
+# Programmsymbole anderer Repos (Symbole 0.7, byte-gleich, Ordner
+# thema/programme/, Herkunft und Prüfsummen in thema/programme/HERKUNFT.txt):
+#   org.querencia.{Archiv,Software,Dateisuche,Rechner,Kuerzel}.svg
+#   LIZENZ: GPL-3.0-or-later (Lizenz der Programme), nicht CC-BY-SA-4.0.
+#   Die daraus gebauten Dateien im Thema tragen dieselbe Lizenz.
 
 # ---- Programme (Querencia)
 apps org.querencia.Files org.querencia.Files.svg
@@ -23,6 +29,12 @@ apps org.querencia.Bilder org.querencia.Bilder.svg
 apps org.querencia.Sitzung org.querencia.Sitzung.svg
 apps org.querencia.Lautstaerke org.querencia.Lautstaerke.svg
 apps org.querencia.Dokumente org.querencia.Dokumente.svg
+# übernommen aus den Programm-Repos, GPL-3.0-or-later (Symbole 0.7)
+apps org.querencia.Archiv thema/programme/org.querencia.Archiv.svg
+apps org.querencia.Software thema/programme/org.querencia.Software.svg
+apps org.querencia.Dateisuche thema/programme/org.querencia.Dateisuche.svg
+apps org.querencia.Rechner thema/programme/org.querencia.Rechner.svg
+apps org.querencia.Kuerzel thema/programme/org.querencia.Kuerzel.svg
 # allgemeine Namen, die heutige Starter noch tragen
 apps system-file-manager org.querencia.Files.svg
 apps utilities-terminal org.querencia.Terminal.svg
@@ -31,7 +43,11 @@ apps applets-screenshooter org.querencia.Screenshot.svg
 # ---- Orte
 places folder thema/places/folder.svg
 places user-home thema/places/user-home.svg
+# user-desktop ist ab 0.7 die Arbeitsfläche mit Leiste und zwei minimierten
+# Fenstern: Panel-Knopf „Arbeitsfläche anzeigen“ (querencia-panel
+# arbeitsflaeche_zeigen.rs ICON) und Ordner „Schreibtisch“ zugleich
 places user-desktop thema/places/user-desktop.svg
+places user-desktop-symbolic thema/places/user-desktop-symbolic.svg
 places folder-documents thema/places/folder-documents.svg
 places folder-pictures thema/places/folder-pictures.svg
 places folder-music thema/places/folder-music.svg

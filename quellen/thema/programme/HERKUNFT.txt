@@ -1,0 +1,20 @@
+# Programmsymbole im Symbolthema Querencia (Symbole 0.7)
+#
+# Diese fünf SVGs sind byte-gleich aus den Repos der Programme übernommen
+# (21.10.2026). Sie stehen unter der Lizenz ihres Programms,
+# GPL-3.0-or-later, nicht unter CC-BY-SA-4.0 wie die übrigen Quellen dieses
+# Repos (siehe COPYRIGHT und quellen/thema/namen.txt). Rechteinhaber:
+# Querencia Desktop contributors. Änderungen gehören in das Programm-Repo;
+# hier wird nur neu übernommen (byte-gleich, Prüfsumme unten erneuern).
+#
+# Zeile: <Datei> <SHA256> <Repo> <Commit der letzten Änderung> <Pfad im Repo>
+org.querencia.Archiv.svg 9c24fc74975f23ee9c9497c75f84c487867d0f6ccc282e8f6d93c61df49a5307 querencia-archiv c40c64a data/icons/hicolor/scalable/apps/org.querencia.Archiv.svg
+org.querencia.Software.svg a7b62ce22cc7432b9efa9231c2479d3c7bb3a5c1569638c21dfd4367db785b54 querencia-software 7fa03d5 integration/vorschlag/org.querencia.Software.svg
+org.querencia.Dateisuche.svg f490b78cb859ef418312f02ec571c6412376d9ce77a57fa363f6e0fa6b402124 querencia-dateisuche 1b0524b data/icons/hicolor/scalable/apps/org.querencia.Dateisuche.svg
+org.querencia.Rechner.svg 70346af149c29ddca34e0f80ff4676592909b2218cc4dd1e6692d995e6e2225c querencia-rechner b220beb data/icons/hicolor/scalable/apps/org.querencia.Rechner.svg
+org.querencia.Kuerzel.svg cf372b315338b1ef18a8323e1b3752bbea1e7f182c0ae16e969ea5621269bafa querencia-runtime a29bf5a crates/querencia-kuerzel/data/org.querencia.Kuerzel.svg
+#
+# Gleich mit den Live-Dateien vom 21.10.2026:
+#   ~/.local/share/icons/hicolor/scalable/apps/org.querencia.{Archiv,Software,Dateisuche}.svg
+#   ~/opt/querencia/rechner/b40bf6545b69cdc2/org.querencia.Rechner.svg
+#   ~/opt/querencia/kuerzel/5409601493bb5130/org.querencia.Kuerzel.svg

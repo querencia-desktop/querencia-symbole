@@ -13,20 +13,26 @@ Querencia-Orange (#F07746). Sie folgen der GNOME-2-/Human-Optik und sind bei
   und als SVG, **nie 48×48** (GTK-4.22-Absturz bei 48×48 neben scalable).
 - **Symbolthema „Querencia“** (`quellen/thema/`): 82 Namen (ab 0.6: 83) für Ordner,
   Papierkorb, Computer, Laufwerke, Netzwerk, Lautstärke, Meldungen,
-  Menükategorien und Panel-Einstellungen. `Inherits=gnome-human,hicolor`.
+  Menükategorien und Panel-Einstellungen; ab 0.7 89 Namen: `user-desktop`
+  ist die Arbeitsfläche mit Leiste und minimierten Fenstern (Panel-Knopf
+  „Arbeitsfläche anzeigen“ und Ordner „Arbeitsfläche“ zugleich, dazu
+  `user-desktop-symbolic`), und die Programmsymbole Archiv, Software,
+  Dateisuche, Rechner und Kürzel sind aus ihren Repos übernommen
+  (`quellen/thema/programme/`, GPL-3.0-or-later). `Inherits=gnome-human,hicolor`.
   `namen.txt` ordnet jedem Namen seine Quelle zu, `genutzt.txt` listet die
   Namen, die Panel und Desktop abfragen.
 
-> **Alpha.** Noch nicht alle Programme haben ein eigenes Symbol im Repo
-> (Archiv liegt als Entwurf im Archiv-Repo).
+> **Alpha.** Die Symbole von Archiv, Software, Dateisuche, Rechner und
+> Kürzel werden in ihren eigenen Repos gezeichnet; dieses Repo übernimmt sie
+> nur byte-gleich ins Thema.
 
 ## Stand
 
 | | |
 |---|---|
-| Version | 0.6 (Tag `symbole/0.6`): eigenes Symbol `org.querencia.Dokumente` (Blatt mit Lupe) |
-| Auf der Entwicklungs-VM | 0.5.2 live seit 20.10.2026; 0.6 geprüft (Probe 177/0) und freigegeben, Aktivierung offen |
-| Letzte Prüfung | 0.6: Probe 177/0 gegen umgelenkte Pfade, isolierte Belege; 0.5.2: Probe 193/0, Nachkontrolle PASS |
+| Version | 0.7 (Zweig `symbole-07`): Symbol für den Panel-Knopf „Arbeitsfläche anzeigen“ (`user-desktop`), Programmsymbole Archiv, Software, Dateisuche, Rechner, Kürzel im Thema |
+| Auf der Entwicklungs-VM | 0.6 live seit 20.10.2026 19:47; 0.7 geprüft, Freigabe offen |
+| Letzte Prüfung | 0.7: Probe 115/0 gegen umgelenkte Pfade, isolierte Belege (Panel G2-AL, Menü, GTK-Lookup); 0.6: Probe 177/0, Nachkontrolle PASS |
 
 Änderungen je Version: [CHANGELOG.md](CHANGELOG.md).
 
@@ -45,6 +51,7 @@ Querencia-Orange (#F07746). Sie folgen der GNOME-2-/Human-Optik und sind bei
 bash integration/symbole-integrieren-0.5.2.sh pruefen # Fassung 0.5.2 (live seit 20.10.2026 11:01)
 bash integration/thema-integrieren.sh pruefen     # Symbolthema ~/.local/share/icons/Querencia
 bash integration/symbole-integrieren-0.6.sh pruefen   # Fassung 0.6: Symbol von Querencia Dokumente
+bash ~/projects/querencia-symbole-07/integration/symbole-07-integrieren.sh pruefen   # Fassung 0.7
 ```
 
 `aktivieren` und `zurueck` führt nur die Status-Session nach Freigabe aus
@@ -72,6 +79,23 @@ die Vorlagen von 0.5.2 und vom Thema bleiben unberührt.
   Dokumente- und das Thema-Skript im Probe-HOME laufen); Belegbilder:
   `werkzeug/beleg-lauf-06.sh <name> ausgang|neu <BxH>`.
 
+### Fassung 0.7 (Arbeitsfläche anzeigen, Programmsymbole)
+
+`werkzeug/vorlage-erzeugen-0.7.sh` erzeugt den Arbeitsordner
+`~/projects/querencia-symbole-07/integration/` (außerhalb des Repos): Vorlage
+`alt` (Stand 0.6 = Thema-Vorlage 0.1 + Dokumente) und `neu` (ganzes Thema aus
+`namen.txt`), `SHA256SUMS` und `symbole-07-integrieren.sh` aus
+`integration/symbole-07/symbole-07-integrieren.sh.in`. Das Skript
+(`pruefen | aktivieren | zurueck-0.6`, `SYM07_FREIGABE=ja`) ändert nur den
+Ordner `Querencia`, nie hicolor oder Starter.
+
+- Rückbau: zuerst `symbole-07-integrieren.sh zurueck-0.6`, dann 0.6 bzw.
+  Thema. Solange 0.7 aktiv ist, melden diese „fremd“ und verweigern.
+- Probe: `werkzeug/symbole-probe-0.7.sh <leerer Ordner>`; Belegbilder:
+  `werkzeug/beleg-lauf-07.sh <name> ausgang|neu <BxH>` (Panel aus der
+  Runtime-Ablage), Vergleich `werkzeug/vergleich-07.py`, GTK-Lookup
+  `werkzeug/symbol-nachschlagen.py`.
+
 Nach einer Änderung an `quellen/thema/` baut `werkzeug/thema-vorlage-erzeugen.sh`
 die Vorlage neu. `werkzeug/thema-uebersicht.py` zeichnet die Übersicht je Größe.
 
@@ -88,6 +112,9 @@ contributors“. Werkzeuge in `werkzeug/`: GPL-3.0-or-later, siehe
 `werkzeug/LICENSE` (ENTSCHEIDUNGEN Nr. 19). Rechteinhaber, Vorbehalt für rein
 KI-erzeugte Werke und Hinweise in [COPYRIGHT](COPYRIGHT). Übernommene Bilder
 (Laufwerke, Netzwerk, Lautstärke, Logo) stammen aus querencia-runtime, siehe
-`quellen/thema/namen.txt`. Name und Logo „Querencia“ sind keine freien
+`quellen/thema/namen.txt`. Ausnahme: die Programmsymbole unter
+`quellen/thema/programme/` (Archiv, Software, Dateisuche, Rechner, Kürzel)
+stehen wie ihre Programme unter GPL-3.0-or-later; Herkunft in
+`quellen/thema/programme/HERKUNFT.txt`. Name und Logo „Querencia“ sind keine freien
 Inhalte (Markenregel).
 
