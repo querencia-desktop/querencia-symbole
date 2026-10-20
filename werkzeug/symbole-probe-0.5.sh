@@ -16,7 +16,7 @@
 # Aufruf: bash symbole-probe-0.5.sh <neuer, leerer Arbeitsordner>
 set -uo pipefail
 I=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/../integration" && pwd -P)
-SKRIPT=$I/symbole-integrieren-0.5.sh
+SKRIPT=${PROBE_SKRIPT:-$I/symbole-integrieren-0.5.sh}   # PROBE_SKRIPT: z. B. …-0.5.2.sh
 W=${1:?Arbeitsordner}
 [ ! -e "$W" ] || [ -z "$(ls -A "$W")" ] || { echo "Arbeitsordner $W ist nicht leer" >&2; exit 2; }
 mkdir -p "$W/weg"
@@ -150,6 +150,9 @@ andere() { starter | grep -vE "/($TB|$SS|$FS|$TN|org.querencia.Einstellungen.des
 lauf 0 bash "$SKRIPT" aktivieren
 [ "$(stand)" = "$NEU" ] && ok "[B] aktivieren aus Ausgang: byte-gleich Stand nach 0.5" || { nok "[B] weicht ab"; diff <(echo "$NEU") <(stand) | head; }
 [ "$(grep -c . "$B/opt/protokoll.txt")" -ge 6 ] && ok "[B] Journal geschrieben ($(grep -c . "$B/opt/protokoll.txt") Zeilen)" || nok "[B] Journal fehlt"
+r=$(grep 'aktiviert' "$B/opt/protokoll.txt" | tail -1 | grep -o 'Rückfall[^;]*')
+echo "    Rückfallzeile: $r"
+echo "$r" | grep -q "bash $SKRIPT zurueck-0.3" && ok "[B] Journal: Rückfall nennt das ausgeführte Skript" || nok "[B] Journal: Rückfall nennt ein anderes Skript"
 
 echo "################ T: neuer Terminal-Starter (Simulation der App-ID-Session)"
 FALL=T; baum T /dev/null ohne-tn; nutze T
