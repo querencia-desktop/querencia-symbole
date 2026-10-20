@@ -28,7 +28,8 @@ Querencia-Orange (#F07746). Sie folgen der GNOME-2-/Human-Optik und sind bei
 ## Benutzung
 
 ```bash
-bash integration/symbole-integrieren.sh pruefen   # Programmsymbole und Starter-Icon=-Zeilen
+bash integration/symbole-integrieren.sh pruefen       # Fassung 0.4 (live)
+bash integration/symbole-integrieren-0.5.sh pruefen   # Fassung 0.5 (zusätzlich Files-Starter)
 bash integration/thema-integrieren.sh pruefen     # Symbolthema ~/.local/share/icons/Querencia
 ```
 

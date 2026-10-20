@@ -10,7 +10,8 @@
 #      → aktivieren → zurueck-0.3 → zurueck
 #   T  neuer Terminal-Starter erst nach der Aktivierung; Files-Starter fehlt
 #   F  fremde Stände → verweigert, nichts geändert
-# In Startern ändert sich immer nur die Icon=-Zeile. Live wird nur gelesen.
+# In Startern ändert sich immer nur die Icon=-Zeile; auch nach Fehlern und
+# Signalen bleiben ihre Rechte (live 644/664) erhalten. Live wird nur gelesen.
 # Die Probe löscht nichts (neue Unterordner, Beiseitelegen nach <arbeit>/weg/).
 # Aufruf: bash symbole-probe-0.5.sh <neuer, leerer Arbeitsordner>
 set -uo pipefail
@@ -38,7 +39,8 @@ baum() {
 }
 beiseite() { mv -- "$1" "$W/weg/$(date +%s%N)-$(basename -- "$1")"; }
 nutze() { export SYM_OPT=$W/$1/opt SYM_APPS=$W/$1/apps SYM_ICONS=$W/$1/icons SYM_STATE=$W/$1/state; B=$W/$1; }
-stand() { (cd "$B" && find icons apps -type f -exec sha256sum {} + | LC_ALL=C sort; find icons apps -type d | LC_ALL=C sort); }
+# Stand: Prüfsummen, Ordner und die Rechte der Starter (Rückrollen muss z. B. 664 erhalten)
+stand() { (cd "$B" && find icons apps -type f -exec sha256sum {} + | LC_ALL=C sort; find icons apps -type d | LC_ALL=C sort; find apps -type f -exec stat -c '%a %n' {} + | LC_ALL=C sort); }
 starter() { (cd "$B/apps" && find . -type f -name '*.desktop' -exec sha256sum {} + | LC_ALL=C sort); }
 zust() { bash "$SKRIPT" pruefen 2>&1 | grep -v ': alt = Ausgang' | grep -oE ': (alt|neu|fremd|fehlt)( |$)' | awk '{print $2}' | tr '\n' ' ' | sed 's/ $//'; }
 lauf() { local erw=$1; shift; out=$("$@" 2>&1); rc=$?; echo "$out" | sed 's/^/    /'; [ "$rc" = "$erw" ] && ok "[$FALL] ${*: -1} → Exit $rc" || nok "[$FALL] ${*: -1} → Exit $rc (erwartet $erw)"; }
