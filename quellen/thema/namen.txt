@@ -22,6 +22,7 @@ apps org.querencia.Editor org.querencia.Editor.svg
 apps org.querencia.Bilder org.querencia.Bilder.svg
 apps org.querencia.Sitzung org.querencia.Sitzung.svg
 apps org.querencia.Lautstaerke org.querencia.Lautstaerke.svg
+apps org.querencia.Dokumente org.querencia.Dokumente.svg
 # allgemeine Namen, die heutige Starter noch tragen
 apps system-file-manager org.querencia.Files.svg
 apps utilities-terminal org.querencia.Terminal.svg
