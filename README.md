@@ -2,8 +2,10 @@
 
 Eigene Programmsymbole und das Symbolthema „Querencia“ für alle, die
 Querencia Desktop benutzen. Teil von
-[Querencia Desktop](https://github.com/querencia-desktop/querencia) – einer
+[Querencia Desktop](https://querencialinux.org) – einer
 klassischen Desktopumgebung im GNOME-2-Stil für Wayland (labwc, Rust, GTK 4).
+Installiert wird es zusammen mit Querencia Desktop aus der APT-Quelle;
+Anleitung auf <https://querencialinux.org>.
 
 *English summary:* Application icons and the “Querencia” icon theme of
 Querencia Desktop: flat, grey line art with an orange accent in the spirit of
