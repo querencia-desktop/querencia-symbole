@@ -12,18 +12,19 @@
 set -euo pipefail
 R=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
 P=${1:?profil}; ART=${2:?ausgang|neu}
-Z=${3:-~/projects/querencia-symbole-07/integration}
+Z=${3:-$HOME/projects/querencia-symbole-07/integration}
 case $P in "$R"/gui-test/*) ;; *) echo "Profil nur unter $R/gui-test/" >&2; exit 2 ;; esac
 [ ! -e "$P" ] || { echo "Profil $P gibt es schon (Probe löscht nichts)" >&2; exit 2; }
 mkdir -p "$P"/{config/labwc,config/querencia,config/dconf,config/gtk-4.0,data/themes,opt/bin,state,logs}
-L=~/projects/querencia-runtime/session/querencia/labwc
+KONF=${XDG_CONFIG_HOME:-$HOME/.config}; DATEN=${XDG_DATA_HOME:-$HOME/.local/share}
+L=${LABWC_VORGABE:-$HOME/projects/querencia-runtime/session/querencia/labwc}
 cp "$L/rc.xml" "$L/environment" "$P/config/labwc/"
-cp ~/.config/querencia/panel.ini "$P/config/querencia/"
-[ -f ~/.config/dconf/user ] && cp ~/.config/dconf/user "$P/config/dconf/"
-ln -s ~/.local/share/themes/Querencia-Klassisch "$P/data/themes/Querencia-Klassisch"
-cp -a ~/.local/share/applications "$P/data/applications"
+cp "$KONF/querencia/panel.ini" "$P/config/querencia/"
+[ -f "$KONF/dconf/user" ] && cp "$KONF/dconf/user" "$P/config/dconf/"
+ln -s "$DATEN/themes/Querencia-Klassisch" "$P/data/themes/Querencia-Klassisch"
+cp -a "$DATEN/applications" "$P/data/applications"
 mkdir -p "$P/data/icons"
-cp -a ~/.local/share/icons/hicolor "$P/data/icons/"
+cp -a "$DATEN/icons/hicolor" "$P/data/icons/"
 cp -r "$Z/vorlage/alt/Querencia" "$P/data/icons/"
 find "$P/data/icons/Querencia" -type d -exec chmod 0755 {} +
 find "$P/data/icons/Querencia" -type f -exec chmod 0644 {} +

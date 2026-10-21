@@ -18,7 +18,7 @@ panel_neu() { kill "$PAN"; wait "$PAN" 2>/dev/null; panel_start; }
 python3 -I "$W/symbol-nachschlagen.py" 16,22,24,32,48 user-desktop user-desktop-symbolic show-desktop show-desktop-symbolic \
     org.querencia.Archiv org.querencia.Software org.querencia.Dateisuche org.querencia.Rechner org.querencia.Kuerzel \
     >"$OUT/nachschlagen.txt" 2>&1
-~/opt/querencia/bin/querencia-desktop >>"$OUT/desktop.log" 2>&1 &
+"$HOME/opt/querencia/bin/querencia-desktop" >>"$OUT/desktop.log" 2>&1 &
 sleep 3
 panel_start
 q "$(pt $((B/2)) $((H/2)))" "wait 300"

@@ -5,6 +5,16 @@ Einträge sind aus den Tag-Texten und Commits zusammengefasst; ab 0.4 betreffen
 die Fassungen vor allem das Einrichten in der Entwicklungsumgebung
 (`integration/`), die Symbole selbst änderten sich mit 0.3, 0.6 und 0.7.
 
+## [Unveröffentlicht]
+
+### Geändert
+- Werkzeuge ohne feste Heimpfade (G1, ENTSCHEIDUNGEN Nr. 23): `isoliert.py`,
+  `beleg-lauf*.sh`, `beleg-profil*.sh` und `szenario-*.sh` nehmen `$HOME`,
+  `XDG_CONFIG_HOME`/`XDG_DATA_HOME` oder Parameter (`LABWC_BIN`, `LABWC_VORGABE`,
+  `PANEL`, `PDF`). Werkzeuge nur für die Live-Integration (Vorlagen erzeugen,
+  Proben der Integrationsskripte, `bauen.sh`) liegen jetzt unter
+  `integration/werkzeug/`. Thema-Daten und Bau unverändert.
+
 ## [0.7] – 2026-10-21
 
 ### Hinzugefügt

@@ -16,9 +16,9 @@ echo "icon-theme im Wegwerf-dconf: $(gsettings get org.gnome.desktop.interface i
 . "$W/eingabe.sh"
 # qeingabe bezieht absolute Zeigerkoordinaten fest auf 1280x720
 pt() { echo "move $(( $1 * 1280 / B )) $(( $2 * 720 / H ))"; }
-panel_start() { ~/opt/querencia/bin/querencia-panel >>"$OUT/panel.log" 2>&1 & PANEL=$!; sleep 4; }
+panel_start() { "$HOME/opt/querencia/bin/querencia-panel" >>"$OUT/panel.log" 2>&1 & PANEL=$!; sleep 4; }
 panel_neu() { kill "$PANEL"; wait "$PANEL" 2>/dev/null; panel_start; }
-~/opt/querencia/bin/querencia-desktop >>"$OUT/desktop.log" 2>&1 &
+"$HOME/opt/querencia/bin/querencia-desktop" >>"$OUT/desktop.log" 2>&1 &
 sleep 3
 panel_start
 q "$(pt $((B/2)) $((H/2)))" "wait 300"

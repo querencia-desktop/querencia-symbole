@@ -57,7 +57,7 @@ bash ~/projects/querencia-symbole-07/integration/symbole-07-integrieren.sh pruef
 
 `aktivieren` und `zurueck` führt nur die Status-Session nach Freigabe aus
 (`SYM_FREIGABE=ja` bzw. `THM_FREIGABE=ja`). Proben laufen gegen umgelenkte
-Pfade: `PROBE_SKRIPT=… werkzeug/symbole-probe-0.5.sh`, `werkzeug/thema-probe.sh`.
+Pfade: `PROBE_SKRIPT=… integration/werkzeug/symbole-probe-0.5.sh`, `integration/werkzeug/thema-probe.sh`.
 Die älteren Fassungen `symbole-integrieren.sh` (0.4) und `symbole-integrieren-0.5.sh`
 (0.5) bleiben unverändert liegen, weil Journalzeilen auf sie zeigen.
 
@@ -67,7 +67,7 @@ Die älteren Fassungen `symbole-integrieren.sh` (0.4) und `symbole-integrieren-0
 die Dateien von `org.querencia.Dokumente`: im Thema Querencia kommen sie dazu,
 in hicolor ersetzen sie das Symbol, das `dokumente-010-integrieren.sh`
 (querencia-dokumente) dort abgelegt hat. Vorlage: `integration/vorlage-0.6/`
-(`neu/` und `dokumente-0.1.0/`, erzeugt mit `werkzeug/vorlage-erzeugen-0.6.sh`);
+(`neu/` und `dokumente-0.1.0/`, erzeugt mit `integration/werkzeug/vorlage-erzeugen-0.6.sh`);
 die Vorlagen von 0.5.2 und vom Thema bleiben unberührt.
 
 - Aktivieren: zuerst Dokumente 0.1.0, dann 0.6. Fehlt Dokumente, legt 0.6 nur
@@ -76,13 +76,13 @@ die Vorlagen von 0.5.2 und vom Thema bleiben unberührt.
 - Rückbau: zuerst `symbole-integrieren-0.6.sh zurueck-0.5.2`, dann
   `dokumente-010-integrieren.sh zurueck` bzw. `thema-integrieren.sh zurueck`.
   Solange 0.6 aktiv ist, melden beide „fremd“ und verweigern (nichts geändert).
-- Probe: `werkzeug/symbole-probe-0.6.sh <leerer Ordner>` (lässt auch das
+- Probe: `integration/werkzeug/symbole-probe-0.6.sh <leerer Ordner>` (lässt auch das
   Dokumente- und das Thema-Skript im Probe-HOME laufen); Belegbilder:
   `werkzeug/beleg-lauf-06.sh <name> ausgang|neu <BxH>`.
 
 ### Fassung 0.7 (Arbeitsfläche anzeigen, Programmsymbole)
 
-`werkzeug/vorlage-erzeugen-0.7.sh` erzeugt den Arbeitsordner
+`integration/werkzeug/vorlage-erzeugen-0.7.sh` erzeugt den Arbeitsordner
 `~/projects/querencia-symbole-07/integration/` (außerhalb des Repos): Vorlage
 `alt` (Stand 0.6 = Thema-Vorlage 0.1 + Dokumente) und `neu` (ganzes Thema aus
 `namen.txt`), `SHA256SUMS` und `symbole-07-integrieren.sh` aus
@@ -92,18 +92,20 @@ Ordner `Querencia`, nie hicolor oder Starter.
 
 - Rückbau: zuerst `symbole-07-integrieren.sh zurueck-0.6`, dann 0.6 bzw.
   Thema. Solange 0.7 aktiv ist, melden diese „fremd“ und verweigern.
-- Probe: `werkzeug/symbole-probe-0.7.sh <leerer Ordner>`; Belegbilder:
+- Probe: `integration/werkzeug/symbole-probe-0.7.sh <leerer Ordner>`; Belegbilder:
   `werkzeug/beleg-lauf-07.sh <name> ausgang|neu <BxH>` (Panel aus der
   Runtime-Ablage), Vergleich `werkzeug/vergleich-07.py`, GTK-Lookup
   `werkzeug/symbol-nachschlagen.py`.
 
-Nach einer Änderung an `quellen/thema/` baut `werkzeug/thema-vorlage-erzeugen.sh`
+Nach einer Änderung an `quellen/thema/` baut `integration/werkzeug/thema-vorlage-erzeugen.sh`
 die Vorlage neu. `werkzeug/thema-uebersicht.py` zeichnet die Übersicht je Größe.
 
 ## Bauen und Prüfen
 
-`python3 -I werkzeug/rendern.py <quellordner> <ziel> <name> …` rendert die PNG-Stufen 16–256 (ohne 48), `werkzeug/thema-vorlage-erzeugen.sh` baut die Thema-Vorlage; Proben gegen umgelenkte Pfade mit `werkzeug/symbole-probe-0.5.sh` und `werkzeug/thema-probe.sh`.
+`python3 -I werkzeug/rendern.py <quellordner> <ziel> <name> …` rendert die PNG-Stufen 16–256 (ohne 48), `integration/werkzeug/thema-vorlage-erzeugen.sh` baut die Thema-Vorlage; Proben gegen umgelenkte Pfade mit `integration/werkzeug/symbole-probe-0.5.sh` und `integration/werkzeug/thema-probe.sh`.
 Benutzung der Integrationsskripte siehe „Benutzung“; Belegbilder nur isoliert mit `werkzeug/beleg-lauf-thema2.sh` (headless labwc, eigener Bus, eigenes `HOME`).
+
+Die Werkzeuge unter `werkzeug/` nehmen Pfade aus `$HOME`, `XDG_CONFIG_HOME`/`XDG_DATA_HOME` oder Parametern: `LABWC_BIN` (labwc für `isoliert.py`, Vorgabe `~/opt/labwc-0.9.8/bin/labwc`), `LABWC_VORGABE` (rc.xml und environment für die Belegprofile, Vorgabe der Runtime-Checkout unter `~/projects/querencia-runtime`), `PANEL`, `PDF`, `EDITOR_BIN`, `SYSMON_BIN` und Programme unter `~/opt/querencia/bin`. Werkzeuge, die nur der Live-Integration dienen (Vorlagen erzeugen, Proben der Integrationsskripte, `bauen.sh`), liegen unter `integration/werkzeug/`.
 
 ## Lizenz
 

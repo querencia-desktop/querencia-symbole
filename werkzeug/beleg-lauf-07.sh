@@ -7,7 +7,7 @@ set -euo pipefail
 R=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
 NAME=$1; ART=$2; RES=$3; T=${4:-300}
 P=$R/gui-test/$NAME; OUT=$R/nachweis/symbole-07/belege/$NAME
-PANEL=${PANEL:-~/opt/querencia/panel/57a015241b32234b/querencia-panel}
+PANEL=${PANEL:-$HOME/opt/querencia/panel/57a015241b32234b/querencia-panel}
 bash "$R/werkzeug/beleg-profil-07.sh" "$P" "$ART"
 mkdir -p "$OUT"
 cat >"$P/env.sh" <<X

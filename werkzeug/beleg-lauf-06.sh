@@ -16,7 +16,7 @@ QA=$R/werkzeug/bin/qausgabe
 OUT=$OUT
 RES=$RES
 ART=$ART
-PDF=~/projects/querencia-dokumente/gui-test/pdf/bericht.pdf
+PDF=${PDF:-$HOME/projects/querencia-dokumente/gui-test/pdf/bericht.pdf}
 export GSK_RENDERER=cairo
 X
 python3 -I "$R/werkzeug/isoliert.py" "$P" "$R/werkzeug/szenario-06.sh" "$T"

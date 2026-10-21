@@ -12,7 +12,7 @@ B=${RES%x*}; H=${RES#*x}
 "$QA" "$RES" 2>>"$OUT/szenario.log"; sleep 1
 . "$W/eingabe.sh"
 pt() { echo "move $(( $1 * 1280 / B )) $(( $2 * 720 / H ))"; }
-panel_start() { ~/opt/querencia/bin/querencia-panel >>"$OUT/panel.log" 2>&1 & PANEL=$!; sleep 4; }
+panel_start() { "$HOME/opt/querencia/bin/querencia-panel" >>"$OUT/panel.log" 2>&1 & PANEL=$!; sleep 4; }
 panel_start
 # Anwendungen öffnen (ein Klick), dann nur noch mit dem Zeiger wandern
 q "$(pt 300 300)" "wait 300" "$(pt 40 12)" "wait 300" "click" "wait 1500"
@@ -30,17 +30,17 @@ sleep 1
 # Fenster öffnen (ab hier keine Eingaben mehr)
 "$EDITOR_BIN" >"$OUT/editor.log" 2>&1 &
 sleep 2
-~/opt/querencia/bin/querencia-bilder >"$OUT/bilder.log" 2>&1 &
+"$HOME/opt/querencia/bin/querencia-bilder" >"$OUT/bilder.log" 2>&1 &
 sleep 2
-~/opt/querencia/bin/querencia-einstellungen >"$OUT/einstellungen.log" 2>&1 &
+"$HOME/opt/querencia/bin/querencia-einstellungen" >"$OUT/einstellungen.log" 2>&1 &
 sleep 2
-~/opt/querencia/bin/querencia-lautstaerke >"$OUT/lautstaerke.log" 2>&1 &
+"$HOME/opt/querencia/bin/querencia-lautstaerke" >"$OUT/lautstaerke.log" 2>&1 &
 sleep 2
-~/opt/querencia/bin/querencia-dateisuche >"$OUT/dateisuche.log" 2>&1 &
+"$HOME/opt/querencia/bin/querencia-dateisuche" >"$OUT/dateisuche.log" 2>&1 &
 sleep 2
 "$SYSMON_BIN" >"$OUT/systemmonitor.log" 2>&1 &
 sleep 2
-~/opt/querencia/bin/querencia-sitzung --dialog >"$OUT/sitzung.log" 2>&1 &
+"$HOME/opt/querencia/bin/querencia-sitzung" --dialog >"$OUT/sitzung.log" 2>&1 &
 sleep 4
 grim "$OUT/f01-fensterliste-$RES.png"
 grim -g "0,$((H-32)) ${B}x32" "$OUT/f02-fensterliste-leiste-$RES.png"
