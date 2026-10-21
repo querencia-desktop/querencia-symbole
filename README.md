@@ -1,123 +1,100 @@
 # Querencia Symbole
 
-Eigene Programmsymbole und das Symbolthema „Querencia“ von Querencia Desktop.
-Die Symbole sind flach, haben graue Linien (#5a5a5a) und einen Akzent in
-Querencia-Orange (#F07746). Sie folgen der GNOME-2-/Human-Optik und sind bei
-16 und 22 px lesbar.
+Eigene Programmsymbole und das Symbolthema „Querencia“ für alle, die
+Querencia Desktop benutzen. Teil von
+[Querencia Desktop](https://github.com/querencia-desktop/querencia) – einer
+klassischen Desktopumgebung im GNOME-2-Stil für Wayland (labwc, Rust, GTK 4).
+
+*English summary:* Application icons and the “Querencia” icon theme of
+Querencia Desktop: flat, grey line art with an orange accent in the spirit of
+GNOME 2's Human icons, built from SVG sources. Part of Querencia Desktop, a
+classic GNOME-2-style desktop for Wayland. Alpha; documentation is in German.
+
+> **Alpha.** Das Thema deckt 91 Namen ab; alles andere erbt es von
+> `gnome-human`, dann `hicolor`. Keine Gewähr für Vollständigkeit.
+
+## Zweck
 
 - **Programmsymbole** (`quellen/org.querencia.*.svg`): Systemmonitor,
-  Einstellungen, Editor, Bilder, Sitzung, Lautstärkeregler (G2-V), Files,
-  Terminal und Screenshot (Thema-2) sowie Dokumente (0.6: Blatt mit Lupe;
-  der Entwurf aus Dokumente 0.1.0 liegt unter `quellen/entwurf/`). Sie werden in
-  `~/.local/share/icons/hicolor` installiert, als PNG 16/22/24/32/64/128/256
-  und als SVG, **nie 48×48** (GTK-4.22-Absturz bei 48×48 neben scalable).
-- **Symbolthema „Querencia“** (`quellen/thema/`): 82 Namen (ab 0.6: 83) für Ordner,
+  Einstellungen, Editor, Bilder, Sitzung, Lautstärkeregler, Files, Terminal,
+  Screenshot und Dokumente (Blatt mit Lupe, seit 0.6). Installiert werden sie als PNG 16/22/24/32/64/128/256 und
+  als SVG, **nie 48×48** (GTK 4.22 stürzt ab, wenn ein Symbol in 48×48 und als
+  Scalable vorliegt).
+- **Symbolthema „Querencia“** (`quellen/thema/`): 91 Namen für Ordner,
   Papierkorb, Computer, Laufwerke, Netzwerk, Lautstärke, Meldungen,
-  Menükategorien und Panel-Einstellungen; ab 0.7 91 Namen: `user-desktop`
-  ist die Arbeitsfläche mit Leiste und minimierten Fenstern (Panel-Knopf
-  „Arbeitsfläche anzeigen“ und Ordner „Arbeitsfläche“ zugleich, dazu
-  `user-desktop-symbolic` und der Alias `show-desktop`/`show-desktop-symbolic`;
-  symbolische Namen nur als SVG), und die Programmsymbole Archiv, Software,
-  Dateisuche, Rechner und Kürzel sind aus ihren Repos übernommen
-  (`quellen/thema/programme/`, GPL-3.0-or-later). `Inherits=gnome-human,hicolor`.
+  Menükategorien und Panel-Einstellungen; seit 0.7 `user-desktop` (Panel-Knopf
+  „Arbeitsfläche anzeigen“ und Ordner „Arbeitsfläche“, dazu
+  `user-desktop-symbolic` und der Alias `show-desktop`; symbolische Namen nur
+  als SVG) und die Programmsymbole Archiv, Software, Dateisuche, Rechner und
+  Kürzel aus ihren Repos (`quellen/thema/programme/`, GPL-3.0-or-later);
+  `Inherits=gnome-human,hicolor`.
   `namen.txt` ordnet jedem Namen seine Quelle zu, `genutzt.txt` listet die
   Namen, die Panel und Desktop abfragen.
+- Gestaltung: flach, graue Linien (`#5a5a5a`), Akzent in Querencia-Orange
+  (`#F07746`), bei 16 und 22 px lesbar.
+- Bewusst **nicht** Teil dieses Repos: ein vollständiges Symbolthema (das
+  Grundthema bleibt `gnome-human`), Mauszeiger, GTK-Thema.
 
-> **Alpha.** Die Symbole von Archiv, Software, Dateisuche, Rechner und
-> Kürzel werden in ihren eigenen Repos gezeichnet; dieses Repo übernimmt sie
-> nur byte-gleich ins Thema.
+| Ordner | Inhalt |
+|---|---|
+| `quellen/` | SVG-Quellen (Quelle der Wahrheit); `entwurf/` verworfene Varianten; `thema/uebernommen/` byte-gleiche Kopien aus dem Repo `querencia-shell` (Laufwerke, Netzwerk, Lautstärke, Logo) |
+| `werkzeug/` | Rendern (`rendern.py`), Thema bauen (`thema-bauen.py`), Übersichten und isolierte Belegläufe; Pfade aus `$HOME`, `XDG_CONFIG_HOME`/`XDG_DATA_HOME` oder Parametern (`LABWC_BIN`, `LABWC_VORGABE`, `PANEL`, `PDF`, `EDITOR_BIN`, `SYSMON_BIN`) |
 
 ## Stand
 
 | | |
 |---|---|
-| Version | 0.7 (Zweig `symbole-07`): Symbol für den Panel-Knopf „Arbeitsfläche anzeigen“ (`user-desktop`, Alias `show-desktop`), Programmsymbole Archiv, Software, Dateisuche, Rechner, Kürzel im Thema |
-| Auf der Entwicklungs-VM | 0.7 live seit 21.10.2026 01:03:30 (Thema 715 Dateien) |
-| Letzte Prüfung | 0.7: Probe 116/0 gegen umgelenkte Pfade, isolierte Belege (Panel G2-AL, Orte, Files, Menü, GTK-Lookup), Nachkontrolle PASS; 0.6: Probe 177/0, Nachkontrolle PASS |
+| Version | 0.7 (Tags `symbole/0.7`, `symbole/0.7-2`; Symbol für „Arbeitsfläche anzeigen“, Programmsymbole Archiv, Software, Dateisuche, Rechner, Kürzel im Thema) |
+| Letzte Prüfung | 21.10.2026: `werkzeug/thema-bauen.py` baut aus `quellen/` reproduzierbar 715 Dateien (91 Namen), zweimal gebaut gleich und byte-gleich mit dem geprüften Stand 0.7, ohne 48×48 |
+| Bekannte Lücken | Die Belegläufe erwarten die Programme von Querencia Desktop unter `~/opt/querencia` (anders über die Parameter oben) |
+| Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22 (librsvg über GdkPixbuf) |
+| Nicht getestet | andere Symbolthemen als Grundlage, HiDPI |
 
-Änderungen je Version: [CHANGELOG.md](CHANGELOG.md).
+## Bauen
 
-## Aufbau
-
-| Ordner | Inhalt |
-|---|---|
-| `quellen/` | SVG-Quellen (Quelle der Wahrheit); `entwurf/` verworfene Varianten |
-| `integration/` | Integrationsskripte mit Vorlagen und `SHA256SUMS` |
-| `werkzeug/` | Rendern, Thema bauen, Übersichten, Proben, isolierte Belegläufe |
-| `nachweis/` | Probe-Logs, Belegbilder, Nachkontrollen |
-
-## Benutzung
+Voraussetzungen (Ubuntu 26.04): `python3`, `python3-gi`,
+`gir1.2-gdkpixbuf-2.0`, `librsvg2-common` (SVG-Lader).
 
 ```bash
-bash integration/symbole-integrieren-0.5.2.sh pruefen # Fassung 0.5.2 (live seit 20.10.2026 11:01)
-bash integration/thema-integrieren.sh pruefen     # Symbolthema ~/.local/share/icons/Querencia
-bash integration/symbole-integrieren-0.6.sh pruefen   # Fassung 0.6: Symbol von Querencia Dokumente
-bash ~/projects/querencia-symbole-07/integration/symbole-07-integrieren.sh pruefen   # Fassung 0.7
+python3 -I werkzeug/thema-bauen.py quellen <ziel>          # Symbolthema <ziel>/Querencia
+python3 -I werkzeug/rendern.py quellen <ziel> org.querencia.Editor   # PNG-Stufen und SVG eines Programmsymbols
 ```
 
-`aktivieren` und `zurueck` führt nur die Status-Session nach Freigabe aus
-(`SYM_FREIGABE=ja` bzw. `THM_FREIGABE=ja`). Proben laufen gegen umgelenkte
-Pfade: `PROBE_SKRIPT=… integration/werkzeug/symbole-probe-0.5.sh`, `integration/werkzeug/thema-probe.sh`.
-Die älteren Fassungen `symbole-integrieren.sh` (0.4) und `symbole-integrieren-0.5.sh`
-(0.5) bleiben unverändert liegen, weil Journalzeilen auf sie zeigen.
+Reproduzierbar: zweimal in getrennte Ordner bauen und vergleichen
+(`diff -r <ziel1> <ziel2>` ist leer).
 
-### Fassung 0.6 (Dokumente)
+## Prüfen
 
-`symbole-integrieren-0.6.sh` (`pruefen | aktivieren | zurueck-0.5.2`) ändert nur
-die Dateien von `org.querencia.Dokumente`: im Thema Querencia kommen sie dazu,
-in hicolor ersetzen sie das Symbol, das `dokumente-010-integrieren.sh`
-(querencia-dokumente) dort abgelegt hat. Vorlage: `integration/vorlage-0.6/`
-(`neu/` und `dokumente-0.1.0/`, erzeugt mit `integration/werkzeug/vorlage-erzeugen-0.6.sh`);
-die Vorlagen von 0.5.2 und vom Thema bleiben unberührt.
+Keine CI (reines Daten-Repo). Prüfen heißt: Thema zweimal bauen und
+vergleichen (siehe „Bauen“), keine 48×48-Stufe,
+Sichtprüfung mit `werkzeug/thema-uebersicht.py`; die isolierten Belegläufe
+(`werkzeug/beleg-lauf*.sh`) laufen nur in einer abgeschotteten Sitzung, nie in
+der laufenden Desktopsitzung. Arbeitsweise: [CONTRIBUTING.md](CONTRIBUTING.md).
 
-- Aktivieren: zuerst Dokumente 0.1.0, dann 0.6. Fehlt Dokumente, legt 0.6 nur
-  den Themeneintrag an; nach einer späteren Dokumente-Installation `aktivieren`
-  erneut ausführen.
-- Rückbau: zuerst `symbole-integrieren-0.6.sh zurueck-0.5.2`, dann
-  `dokumente-010-integrieren.sh zurueck` bzw. `thema-integrieren.sh zurueck`.
-  Solange 0.6 aktiv ist, melden beide „fremd“ und verweigern (nichts geändert).
-- Probe: `integration/werkzeug/symbole-probe-0.6.sh <leerer Ordner>` (lässt auch das
-  Dokumente- und das Thema-Skript im Probe-HOME laufen); Belegbilder:
-  `werkzeug/beleg-lauf-06.sh <name> ausgang|neu <BxH>`.
+## Vorbild und Abgrenzung
 
-### Fassung 0.7 (Arbeitsfläche anzeigen, Programmsymbole)
-
-`integration/werkzeug/vorlage-erzeugen-0.7.sh` erzeugt den Arbeitsordner
-`~/projects/querencia-symbole-07/integration/` (außerhalb des Repos): Vorlage
-`alt` (Stand 0.6 = Thema-Vorlage 0.1 + Dokumente) und `neu` (ganzes Thema aus
-`namen.txt`), `SHA256SUMS` und `symbole-07-integrieren.sh` aus
-`integration/symbole-07/symbole-07-integrieren.sh.in`. Das Skript
-(`pruefen | aktivieren | zurueck-0.6`, `SYM07_FREIGABE=ja`) ändert nur den
-Ordner `Querencia`, nie hicolor oder Starter.
-
-- Rückbau: zuerst `symbole-07-integrieren.sh zurueck-0.6`, dann 0.6 bzw.
-  Thema. Solange 0.7 aktiv ist, melden diese „fremd“ und verweigern.
-- Probe: `integration/werkzeug/symbole-probe-0.7.sh <leerer Ordner>`; Belegbilder:
-  `werkzeug/beleg-lauf-07.sh <name> ausgang|neu <BxH>` (Panel aus der
-  Runtime-Ablage), Vergleich `werkzeug/vergleich-07.py`, GTK-Lookup
-  `werkzeug/symbol-nachschlagen.py`.
-
-Nach einer Änderung an `quellen/thema/` baut `integration/werkzeug/thema-vorlage-erzeugen.sh`
-die Vorlage neu. `werkzeug/thema-uebersicht.py` zeichnet die Übersicht je Größe.
-
-## Bauen und Prüfen
-
-`python3 -I werkzeug/rendern.py <quellordner> <ziel> <name> …` rendert die PNG-Stufen 16–256 (ohne 48), `integration/werkzeug/thema-vorlage-erzeugen.sh` baut die Thema-Vorlage; Proben gegen umgelenkte Pfade mit `integration/werkzeug/symbole-probe-0.5.sh` und `integration/werkzeug/thema-probe.sh`.
-Benutzung der Integrationsskripte siehe „Benutzung“; Belegbilder nur isoliert mit `werkzeug/beleg-lauf-thema2.sh` (headless labwc, eigener Bus, eigenes `HOME`).
-
-Die Werkzeuge unter `werkzeug/` nehmen Pfade aus `$HOME`, `XDG_CONFIG_HOME`/`XDG_DATA_HOME` oder Parametern: `LABWC_BIN` (labwc für `isoliert.py`, Vorgabe `~/opt/labwc-0.9.8/bin/labwc`), `LABWC_VORGABE` (rc.xml und environment für die Belegprofile, Vorgabe der Runtime-Checkout unter `~/projects/querencia-runtime`), `PANEL`, `PDF`, `EDITOR_BIN`, `SYSMON_BIN` und Programme unter `~/opt/querencia/bin`. Werkzeuge, die nur der Live-Integration dienen (Vorlagen erzeugen, Proben der Integrationsskripte, `bauen.sh`), liegen unter `integration/werkzeug/`.
+Vorbild für die Gestaltung sind **die Human-Symbole von Ubuntu 10.04 und
+GNOME 2.30**. Querencia übernimmt davon Stil und Farbstimmung, **keine
+Grafiken**: alle Symbole sind eigene Zeichnungen. Das Projekt ist mit
+Canonical, GNOME und deren Autoren weder verbunden noch von ihnen
+unterstützt. Das Thema erbt fehlende Namen zur Laufzeit von `gnome-human`
+(nicht mitgeliefert, Ubuntu-Paket `gnome-human-icon-theme`).
 
 ## Lizenz
 
-Symbole und Symbolthema (`quellen/` und alles daraus Gebaute):
-CC-BY-SA-4.0, siehe [LICENSE](LICENSE); Namensnennung „Querencia Desktop
-contributors“. Werkzeuge in `werkzeug/`: GPL-3.0-or-later, siehe
-`werkzeug/LICENSE` (ENTSCHEIDUNGEN Nr. 19). Rechteinhaber, Vorbehalt für rein
-KI-erzeugte Werke und Hinweise in [COPYRIGHT](COPYRIGHT). Übernommene Bilder
-(Laufwerke, Netzwerk, Lautstärke, Logo) stammen aus querencia-runtime, siehe
-`quellen/thema/namen.txt`. Ausnahme: die Programmsymbole unter
-`quellen/thema/programme/` (Archiv, Software, Dateisuche, Rechner, Kürzel)
-stehen wie ihre Programme unter GPL-3.0-or-later; Herkunft in
-`quellen/thema/programme/HERKUNFT.txt`. Name und Logo „Querencia“ sind keine freien
-Inhalte (Markenregel).
+Symbole und Symbolthema: CC-BY-SA-4.0, siehe [LICENSE](LICENSE); Werkzeuge in
+`werkzeug/`: GPL-3.0-or-later, siehe [werkzeug/LICENSE](werkzeug/LICENSE).
+Ausnahme: die Programmsymbole unter `quellen/thema/programme/` (Archiv,
+Software, Dateisuche, Rechner, Kürzel) stehen wie ihre Programme unter
+GPL-3.0-or-later; Herkunft in `quellen/thema/programme/HERKUNFT.txt`.
+Copyright 2026 Querencia Desktop contributors; Urheberhinweis in
+[COPYRIGHT](COPYRIGHT).
 
+Name und Logo „Querencia“ (auch `quellen/thema/uebernommen/querencia-logo.svg`)
+sind keine freien Inhalte: [MARKE.md](MARKE.md).
+
+## Fehler melden
+
+Fehler, Wünsche und Fragen zu Querencia gehen an die gemeinsame Meldestelle:
+<https://github.com/querencia-desktop/querencia/issues/new/choose>.
+Sicherheitslücken bitte nicht öffentlich melden, siehe [SECURITY.md](SECURITY.md).
