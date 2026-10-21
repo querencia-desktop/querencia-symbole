@@ -40,7 +40,7 @@ q "$(pt $((B/2)) $((H/2)))" "wait 300"
 A=$HMP04_PROFILE/data/applications
 starte() { local exe; exe=$(sed -n 's/^Exec=\([^ ]*\).*/\1/p' "$A/$1" | head -1); "$exe" >"$OUT/$2.log" 2>&1 & sleep 3; }
 starte io.github.lgse.Strata.desktop files
-starte org.example.Querencia.Terminal.desktop terminal
+starte org.querencia.Terminal.desktop terminal   # Starter seit Terminal 0.3.0 (vorher die Brücke)
 starte org.querencia.Editor.desktop editor
 starte org.querencia.Systemmonitor.desktop systemmonitor
 starte org.querencia.Screenshot.desktop screenshot
