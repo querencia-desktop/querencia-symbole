@@ -2,25 +2,23 @@
 
 Format nach [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Die
 Einträge sind aus den Tag-Texten und Commits zusammengefasst; ab 0.4 betreffen
-die Fassungen vor allem das Einrichten in der Entwicklungsumgebung
-(`integration/`), die Symbole selbst änderten sich mit 0.3, 0.6 und 0.7.
+die Fassungen vor allem das Einrichten in der Entwicklungsumgebung, die
+Symbole selbst änderten sich mit 0.3, 0.6 und 0.7.
 
 ## [Unveröffentlicht]
 
 ### Geändert
-- Werkzeuge ohne feste Heimpfade (G1, ENTSCHEIDUNGEN Nr. 23): `isoliert.py`,
-  `beleg-lauf*.sh`, `beleg-profil*.sh` und `szenario-*.sh` nehmen `$HOME`,
+- Werkzeuge ohne feste Heimpfade: `isoliert.py`, `beleg-lauf*.sh`,
+  `beleg-profil*.sh` und `szenario-*.sh` nehmen `$HOME`,
   `XDG_CONFIG_HOME`/`XDG_DATA_HOME` oder Parameter (`LABWC_BIN`, `LABWC_VORGABE`,
-  `PANEL`, `PDF`). Werkzeuge nur für die Live-Integration (Vorlagen erzeugen,
-  Proben der Integrationsskripte, `bauen.sh`) liegen jetzt unter
-  `integration/werkzeug/`. Thema-Daten und Bau unverändert.
+  `PANEL`, `PDF`). Thema-Daten und Bau unverändert.
 
 ## [0.7] – 2026-10-21
 
 ### Hinzugefügt
 - Thema Querencia: `user-desktop` neu als Arbeitsfläche mit Leiste und zwei
-  minimierten Fenstern (Panel-Knopf „Arbeitsfläche anzeigen“, QD-078; zugleich
-  Ordner „Arbeitsfläche“, Entscheidung der Startsession: Variante A wie
+  minimierten Fenstern (Panel-Knopf „Arbeitsfläche anzeigen“, zugleich
+  Ordner „Arbeitsfläche“, Entscheidung vom 21.10.2026: Variante A wie
   GNOME 2/Human), dazu `user-desktop-symbolic` und der Alias `show-desktop`
   (+ `-symbolic`) auf dasselbe Bild für einen späteren Runtime-Auftrag. Der
   Ordner-Entwurf bis 0.6 liegt unter `quellen/entwurf/user-desktop-ordner-0.6.svg`.
@@ -29,9 +27,8 @@ die Fassungen vor allem das Einrichten in der Entwicklungsumgebung
 - Programmsymbole `org.querencia.{Archiv,Software,Dateisuche,Rechner,Kuerzel}`
   im Thema (byte-gleich aus den Programm-Repos, GPL-3.0-or-later,
   `quellen/thema/programme/HERKUNFT.txt`), 16–256 + SVG, ohne 48×48.
-- Einrichtung `symbole-07-integrieren.sh` im Arbeitsordner
-  `~/projects/querencia-symbole-07/` (Vorlage alt/neu, `zurueck-0.6`);
-  live seit 21.10.2026 01:03:30.
+- Einrichtung `symbole-07-integrieren.sh` im Arbeitsordner der Fassung
+  (Vorlage alt/neu, `zurueck-0.6`, nicht im Repo).
 
 ## [0.6] – 2026-10-20
 
@@ -76,11 +73,10 @@ die Fassungen vor allem das Einrichten in der Entwicklungsumgebung
 ## [0.2] – 2026-10-19
 
 ### Geändert
-- Einrichtung ändert an Startern nur noch die `Icon=`-Zeile (verträgt die
-  Starter-Änderungen von G2-X).
+- Einrichtung ändert an Startern nur noch die `Icon=`-Zeile.
 
 ## [0.1] – 2026-10-19
 
-Erste Fassung (G2-V, QD-034): eigene Programmsymbole für Systemmonitor,
+Erste Fassung: eigene Programmsymbole für Systemmonitor,
 Einstellungen, Editor, Bilder, Sitzung und Lautstärkeregler (PNG 16–256 und
 SVG, ohne 48×48), Einrichtungsskript, Proben, Belege.
