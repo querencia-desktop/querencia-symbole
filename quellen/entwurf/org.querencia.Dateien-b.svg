@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Querencia Dateien (Entwurf B, verworfen)</title>
+  <desc>Fenster mit Seitenleiste hinten, großer Ordner davor. Verworfen: bei 16 und 22 px liest es sich als Ordner aus dem Symbolthema.</desc>
+  <rect x="3" y="4" width="46" height="40" rx="4" fill="#5a5a5a"/>
+  <rect x="7" y="7" width="16" height="3" rx="1.5" fill="#9a9a9a"/>
+  <rect x="7" y="12" width="38" height="28" rx="1.5" fill="#f4f3f1"/>
+  <path d="M8.5 12 H17 V40 H8.5 A1.5 1.5 0 0 1 7 38.5 V13.5 A1.5 1.5 0 0 1 8.5 12 Z" fill="#c9c6c2"/>
+  <rect x="17" y="12" width="2" height="28" fill="#5a5a5a"/>
+  <path d="M20 55 V27 A3 3 0 0 1 23 24 H33 L37 28 H58 A3 3 0 0 1 61 31 V55 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="20" y="33" width="41" height="27" rx="3" fill="#F07746" stroke="#5a5a5a" stroke-width="3.5"/>
+  <rect x="23" y="36" width="35" height="2.5" fill="#f59a72"/>
+</svg>

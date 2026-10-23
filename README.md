@@ -12,17 +12,18 @@ Querencia Desktop: flat, grey line art with an orange accent in the spirit of
 GNOME 2's Human icons, built from SVG sources. Part of Querencia Desktop, a
 classic GNOME-2-style desktop for Wayland. Alpha; documentation is in German.
 
-> **Alpha.** Das Thema deckt 91 Namen ab; alles andere erbt es von
+> **Alpha.** Das Thema deckt 92 Namen ab; alles andere erbt es von
 > `gnome-human`, dann `hicolor`. Keine Gewähr für Vollständigkeit.
 
 ## Zweck
 
 - **Programmsymbole** (`quellen/org.querencia.*.svg`): Systemmonitor,
   Einstellungen, Editor, Bilder, Sitzung, Lautstärkeregler, Files, Terminal,
-  Screenshot und Dokumente (Blatt mit Lupe, seit 0.6). Installiert werden sie als PNG 16/22/24/32/64/128/256 und
+  Screenshot, Dokumente (Blatt mit Lupe, seit 0.6) und Dateien (Fenster mit
+  Seitenleiste und Ordner, seit 0.8). Installiert werden sie als PNG 16/22/24/32/64/128/256 und
   als SVG, **nie 48×48** (GTK 4.22 stürzt ab, wenn ein Symbol in 48×48 und als
   Scalable vorliegt).
-- **Symbolthema „Querencia“** (`quellen/thema/`): 91 Namen für Ordner,
+- **Symbolthema „Querencia“** (`quellen/thema/`): 92 Namen für Ordner,
   Papierkorb, Computer, Laufwerke, Netzwerk, Lautstärke, Meldungen,
   Menükategorien und Panel-Einstellungen; seit 0.7 `user-desktop` (Panel-Knopf
   „Arbeitsfläche anzeigen“ und Ordner „Arbeitsfläche“, dazu
@@ -46,8 +47,8 @@ classic GNOME-2-style desktop for Wayland. Alpha; documentation is in German.
 
 | | |
 |---|---|
-| Version | 0.7 (Tags `symbole/0.7`, `symbole/0.7-2`; Symbol für „Arbeitsfläche anzeigen“, Programmsymbole Archiv, Software, Dateisuche, Rechner, Kürzel im Thema) |
-| Letzte Prüfung | 21.10.2026: `werkzeug/thema-bauen.py` baut aus `quellen/` reproduzierbar 715 Dateien (91 Namen), zweimal gebaut gleich und byte-gleich mit dem geprüften Stand 0.7, ohne 48×48 |
+| Version | 0.8 (Tags `symbole/0.8`, `symbole/0.8-int`; Programmsymbol Dateien im Thema); davor 0.7 (Symbol für „Arbeitsfläche anzeigen“, Programmsymbole Archiv, Software, Dateisuche, Rechner, Kürzel im Thema) |
+| Letzte Prüfung | 23.10.2026: `werkzeug/thema-bauen.py` baut aus `quellen/` reproduzierbar 723 Dateien (92 Namen), zweimal gebaut gleich; gegenüber Stand 0.7 genau 8 Dateien mehr (`org.querencia.Dateien`), ohne 48×48 |
 | Bekannte Lücken | Die Belegläufe erwarten die Programme von Querencia Desktop unter `~/opt/querencia` (anders über die Parameter oben) |
 | Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22 (librsvg über GdkPixbuf) |
 | Nicht getestet | andere Symbolthemen als Grundlage, HiDPI |

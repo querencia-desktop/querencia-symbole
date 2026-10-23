@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Querencia Dateien (Entwurf C, verworfen)</title>
+  <desc>Helles Fenster mit grauer Titelleiste, Seitenleiste und Ordner. Verworfen: die Titelleiste über die ganze Breite wirkt bei 16 px unruhig, und der Rahmen weicht vom Terminal-Fenster ab.</desc>
+  <rect x="4" y="7" width="56" height="50" rx="4" fill="#f4f3f1" stroke="#5a5a5a" stroke-width="4"/>
+  <rect x="6" y="9" width="52" height="7" fill="#c9c6c2"/>
+  <rect x="4" y="16" width="56" height="3" fill="#5a5a5a"/>
+  <rect x="6" y="19" width="15" height="36" fill="#c9c6c2"/>
+  <rect x="20" y="17" width="3" height="40" fill="#5a5a5a"/>
+  <rect x="9" y="24" width="8" height="3" rx="1.5" fill="#9a9a9a"/>
+  <rect x="9" y="30" width="8" height="3" rx="1.5" fill="#9a9a9a"/>
+  <rect x="9" y="36" width="8" height="3" rx="1.5" fill="#9a9a9a"/>
+  <path d="M27.5 47 V28.5 A2 2 0 0 1 29.5 26.5 H35 L38 29.5 H50.5 A2 2 0 0 1 52.5 31.5 V47 Z" fill="#c9602f" stroke="#5a5a5a" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="27.5" y="33" width="25" height="16" rx="2" fill="#F07746" stroke="#5a5a5a" stroke-width="3"/>
+  <rect x="30" y="35.5" width="20" height="2" fill="#f59a72"/>
+</svg>
