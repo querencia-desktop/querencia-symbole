@@ -29,6 +29,8 @@ apps org.querencia.Bilder org.querencia.Bilder.svg
 apps org.querencia.Sitzung org.querencia.Sitzung.svg
 apps org.querencia.Lautstaerke org.querencia.Lautstaerke.svg
 apps org.querencia.Dokumente org.querencia.Dokumente.svg
+# Querencia Dateien, Dateimanager nach Nautilus 2.30 (Symbole 0.8)
+apps org.querencia.Dateien org.querencia.Dateien.svg
 # übernommen aus den Programm-Repos, GPL-3.0-or-later (Symbole 0.7)
 apps org.querencia.Archiv thema/programme/org.querencia.Archiv.svg
 apps org.querencia.Software thema/programme/org.querencia.Software.svg

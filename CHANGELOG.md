@@ -3,7 +3,7 @@
 Format nach [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Die
 Einträge sind aus den Tag-Texten und Commits zusammengefasst; ab 0.4 betreffen
 die Fassungen vor allem das Einrichten in der Entwicklungsumgebung, die
-Symbole selbst änderten sich mit 0.3, 0.6 und 0.7.
+Symbole selbst änderten sich mit 0.3, 0.6, 0.7 und 0.8.
 
 ## [Unveröffentlicht]
 
@@ -12,6 +12,22 @@ Symbole selbst änderten sich mit 0.3, 0.6 und 0.7.
   `beleg-profil*.sh` und `szenario-*.sh` nehmen `$HOME`,
   `XDG_CONFIG_HOME`/`XDG_DATA_HOME` oder Parameter (`LABWC_BIN`, `LABWC_VORGABE`,
   `PANEL`, `PDF`). Thema-Daten und Bau unverändert.
+
+## [0.8] – 2026-10-23
+
+### Hinzugefügt
+- Eigenes Programmsymbol `org.querencia.Dateien` für den Dateimanager
+  „Querencia Dateien“ (nach Nautilus 2.30, QD-140): Fenster mit grauem
+  Rahmen wie beim Terminal, Seitenleiste „Orte“ mit orangem Eintrag und ein
+  Ordner wie im Thema. Im Thema Querencia 16–256 + SVG, ohne 48×48, keine
+  symbolische Fassung (Programmsymbole haben keine). Verworfene Entwürfe
+  unter `quellen/entwurf/org.querencia.Dateien-{b,c}.svg`.
+- Einrichtung `symbole-08-integrieren.sh` im Arbeitsordner der Fassung
+  (Vorlage alt = 0.7, neu = 0.8, `zurueck-0.7`); Kopie des Arbeitsordners im
+  Repo unter `integration/symbole-08/arbeitsordner/`.
+- `werkzeug/kontrast.py`: Kontrast eines Symbols gegen helle und dunkle
+  Flächen; `werkzeug/dateien-attrappe.py` und `beleg-*-08.sh`,
+  `szenario-08.sh` für die isolierten Belege (hell und dunkel).
 
 ## [0.7] – 2026-10-21
 
@@ -27,9 +43,8 @@ Symbole selbst änderten sich mit 0.3, 0.6 und 0.7.
 - Programmsymbole `org.querencia.{Archiv,Software,Dateisuche,Rechner,Kuerzel}`
   im Thema (byte-gleich aus den Programm-Repos, GPL-3.0-or-later,
   `quellen/thema/programme/HERKUNFT.txt`), 16–256 + SVG, ohne 48×48.
-- Einrichtung `symbole-07-integrieren.sh` im Arbeitsordner
-  `~/projects/querencia-symbole-07/` (Vorlage alt/neu, `zurueck-0.6`);
-  live seit 21.10.2026 01:03:30.
+- Einrichtung `symbole-07-integrieren.sh` im Arbeitsordner der Fassung
+  (Vorlage alt/neu, `zurueck-0.6`, nicht im Repo).
 
 ## [0.6] – 2026-10-20
 
